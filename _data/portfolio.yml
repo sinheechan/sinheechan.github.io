@@ -1,0 +1,41 @@
+# ============================================================
+#  홈 화면 포트폴리오 데이터
+#  이 파일만 수정하면 홈의 기술스택/프로젝트가 바뀝니다.
+#  (글은 _posts 에 올리면 통계·카테고리·태그가 자동 집계됩니다)
+# ============================================================
+
+# ── 기술 스택 ──
+skills:
+  - category: Language
+    items: [Python, SQL, JavaScript, Bash]
+
+  - category: Data / ML
+    items: [Pandas, NumPy, scikit-learn, PyTorch, Spark]
+
+  - category: Data Engineering
+    items: [Airflow, Kafka, dbt, PostgreSQL, BigQuery]
+
+  - category: DevOps / Etc
+    items: [Docker, Git, GitHub Actions, AWS]
+
+# ── 프로젝트 ──
+# name: 프로젝트명 / period: 기간 / description: 설명
+# tags: 사용 기술 / link: 링크 (없으면 빈 문자열 "")
+projects:
+  - name: 실시간 데이터 파이프라인
+    period: 2025
+    description: Kafka 와 Airflow 기반으로 수집·적재·변환을 자동화한 ETL 파이프라인 구축 기록.
+    tags: [Kafka, Airflow, dbt, BigQuery]
+    link: ""
+
+  - name: 추천 시스템 모델링
+    period: 2025
+    description: 협업 필터링과 임베딩 기반 추천 모델을 비교 실험하고 서빙까지 정리한 프로젝트.
+    tags: [PyTorch, scikit-learn, FastAPI]
+    link: ""
+
+  - name: Sinheechan 지식노트
+    period: 진행 중
+    description: 코드 리뷰·알고리즘·라이브러리 학습 기록을 정리하는 이 블로그.
+    tags: [Jekyll, Chirpy, GitHub Pages]
+    link: "https://github.com/sinheechan/sinheechan.github.io"
