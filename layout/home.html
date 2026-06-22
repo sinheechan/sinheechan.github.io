@@ -1,0 +1,197 @@
+---
+layout: default
+---
+
+{% assign folio = site.data.portfolio %}
+
+<div class="folio">
+
+  <!-- 섹션 내 이동 메뉴 (Chirpy 사이드바와 별개로 한 페이지 안에서 점프) -->
+  <nav class="folio-nav">
+    <a href="#folio-home">Home</a>
+    <a href="#folio-about">About</a>
+    <a href="#folio-skills">Skills</a>
+    <a href="#folio-work">Work</a>
+    {% if site.posts.size > 0 %}<a href="#folio-posts">Posts</a>{% endif %}
+    <a href="#folio-contact">Contact</a>
+  </nav>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section id="folio-home" class="folio-hero">
+    {% assign avatar = folio.profile.image | default: site.avatar %}
+    {% if avatar and avatar != '' %}
+      <img class="folio-avatar-img" src="{{ avatar | relative_url }}" alt="{{ folio.profile.name | default: site.social.name }}">
+    {% else %}
+      <div class="folio-avatar">{{ folio.profile.name | default: site.social.name | slice: 0, 1 }}</div>
+    {% endif %}
+    <h1>{{ folio.profile.name | default: site.social.name | default: site.title }}</h1>
+    <p>{{ folio.profile.tagline | default: site.tagline }}</p>
+    {% if folio.profile.badges %}
+      <div class="folio-badges">
+        {% for b in folio.profile.badges %}<span class="folio-badge">{{ b }}</span>{% endfor %}
+      </div>
+    {% endif %}
+  </section>
+  <hr class="folio-devider">
+
+  <!-- ══════════ ABOUT ══════════ -->
+  {% if folio.about %}
+  <section id="folio-about" class="folio-section">
+    <h2>About Me</h2>
+
+    {% if folio.about.intro %}
+    <div class="folio-bundle">
+      {% for para in folio.about.intro %}<p>{{ para }}</p>{% endfor %}
+    </div>
+    {% endif %}
+
+    {% if folio.about.enjoy %}
+    <div class="folio-bundle">
+      <h3>What I Enjoy</h3>
+      <p class="folio-muted">{{ folio.about.enjoy }}</p>
+    </div>
+    {% endif %}
+
+    {% if folio.experience %}
+    <div class="folio-bundle">
+      <h3>Experience</h3>
+      {% for job in folio.experience %}
+        <div class="folio-row">
+          <div class="folio-ico">{% if job.icon %}<i class="{{ job.icon }}"></i>{% else %}<i class="fas fa-building"></i>{% endif %}</div>
+          <div>
+            <p class="folio-row-title">{{ job.role }}</p>
+            <p class="folio-muted">{{ job.org }}{% if job.period %} · {{ job.period }}{% endif %}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if folio.education %}
+    <div class="folio-bundle">
+      <h3>Education</h3>
+      {% for edu in folio.education %}
+        <div class="folio-row">
+          <div class="folio-ico">{% if edu.icon %}<i class="{{ edu.icon }}"></i>{% else %}<i class="fas fa-graduation-cap"></i>{% endif %}</div>
+          <div>
+            <p class="folio-row-title">{{ edu.degree }}</p>
+            <p class="folio-muted">{{ edu.org }}{% if edu.period %} · {{ edu.period }}{% endif %}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+  <hr class="folio-devider">
+  {% endif %}
+
+  <!-- ══════════ SKILLS ══════════ -->
+  {% if folio.skills %}
+  <section id="folio-skills" class="folio-section">
+    <h2>Skills</h2>
+    {% for group in folio.skills %}
+      <div class="folio-bundle">
+        <h3>{{ group.name }}</h3>
+        <div class="folio-tags">
+          {% for item in group.items %}<span>{{ item }}</span>{% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+  <hr class="folio-devider">
+  {% endif %}
+
+  <!-- ══════════ WORK (탭) ══════════ -->
+  {% if folio.projects %}
+  <section id="folio-work" class="folio-section">
+    <h2>Work</h2>
+    {% assign groups = folio.projects | map: 'group' | uniq %}
+
+    <div class="folio-tabs">
+      {% for g in groups %}
+        <button type="button" class="folio-tab{% if forloop.first %} active{% endif %}" data-tab="{{ forloop.index0 }}">{{ g }}</button>
+      {% endfor %}
+    </div>
+
+    {% for g in groups %}
+      {% assign items = folio.projects | where: 'group', g %}
+      <div class="folio-pane{% if forloop.first %} show{% endif %}" data-pane="{{ forloop.index0 }}">
+        {% for p in items %}
+          <div class="folio-card">
+            {% if p.image %}
+              <a href="{{ p.link | default: '#' }}" target="_blank" rel="noreferrer" class="folio-thumb-link">
+                <div class="folio-thumb" style="background-image:url('{{ p.image | relative_url }}')"></div>
+              </a>
+            {% else %}
+              <div class="folio-thumb folio-thumb-empty">{{ p.title }}</div>
+            {% endif %}
+            <div class="folio-card-body">
+              {% if p.link %}<a class="folio-link" href="{{ p.link }}" target="_blank" rel="noreferrer">⇢ Link</a>{% endif %}
+              {% if p.tag %}<p class="folio-tag">{{ p.tag }}</p>{% endif %}
+              {% if p.title and p.image %}<p class="folio-card-title">{{ p.title }}</p>{% endif %}
+              <p class="folio-desc">{{ p.desc }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+  <hr class="folio-devider">
+  {% endif %}
+
+  <!-- ══════════ RECENT POSTS (site.posts 자동 집계) ══════════ -->
+  {% if site.posts.size > 0 %}
+  <section id="folio-posts" class="folio-section">
+    <h2>Recent Posts</h2>
+    <div class="folio-posts">
+      {% for post in site.posts limit: 4 %}
+        <a href="{{ post.url | relative_url }}" class="folio-post">
+          <p class="folio-post-title">{{ post.title }}</p>
+          <p class="folio-muted">
+            <i class="far fa-calendar fa-fw"></i> {{ post.date | date: '%Y.%m.%d' }}
+            {% if post.categories.size > 0 %}
+              <i class="far fa-folder-open fa-fw"></i> {{ post.categories | join: ', ' }}
+            {% endif %}
+          </p>
+        </a>
+      {% endfor %}
+    </div>
+    <a href="{{ '/archives/' | relative_url }}" class="folio-more">모든 글 보기 →</a>
+  </section>
+  <hr class="folio-devider">
+  {% endif %}
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section id="folio-contact" class="folio-section folio-contact">
+    <h2>Contact</h2>
+    <p>편하게 연락 주세요!</p>
+    {% assign mail = folio.contact.email | default: site.social.email %}
+    {% if mail %}<p class="folio-muted">E-mail : {{ mail }}</p>{% endif %}
+    <div class="folio-sns">
+      {% if mail %}<a href="mailto:{{ mail }}" aria-label="email"><i class="fas fa-envelope"></i></a>{% endif %}
+      {% assign gh = folio.contact.github %}
+      {% if gh %}<a href="{{ gh }}" target="_blank" rel="noreferrer" aria-label="github"><i class="fab fa-github"></i></a>
+      {% elsif site.github.username %}<a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noreferrer" aria-label="github"><i class="fab fa-github"></i></a>{% endif %}
+      {% if folio.contact.linkedin %}<a href="{{ folio.contact.linkedin }}" target="_blank" rel="noreferrer" aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>{% endif %}
+      <a href="{{ '/feed.xml' | relative_url }}" aria-label="rss"><i class="fas fa-rss"></i></a>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.folio-tab');
+    var panes = document.querySelectorAll('.folio-pane');
+    tabs.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var i = this.getAttribute('data-tab');
+        tabs.forEach(function (b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        panes.forEach(function (p) {
+          p.classList.toggle('show', p.getAttribute('data-pane') === i);
+        });
+      });
+    });
+  })();
+</script>

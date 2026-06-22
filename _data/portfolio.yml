@@ -1,0 +1,94 @@
+# ─────────────────────────────────────────────────────────
+#  포트폴리오 홈 데이터  ( _data/portfolio.yml )
+#  이 파일만 수정하면 홈 화면(_layouts/home.html)이 바뀝니다.
+# ─────────────────────────────────────────────────────────
+
+profile:
+  name: "신희찬 (Sinheechan)"
+  tagline: "데이터 엔지니어링과 머신러닝, 코드 학습 기록을 정리하는 개발자입니다."
+  # 프로필 이미지 (선택). assets/img/ 에 넣고 경로 지정. 없으면 이름 첫 글자 박스로 표시.
+  image: # "/assets/img/profile.jpg"
+  badges:
+    - Data Engineering
+    - Machine Learning
+    - Python
+
+about:
+  intro:
+    - "복잡한 데이터를 깔끔한 파이프라인으로 녹여내고, 배운 내용을 글로 정리하는 것을 좋아합니다."
+    - "재현 가능하고 읽기 좋은 코드를 지향합니다."
+  enjoy: "데이터 시각화, 모델 실험, 기술 블로그 쓰기, 오픈소스 읽기"
+
+# 경력 (위에서부터 최신순). icon 은 Font Awesome 클래스 (선택).
+experience:
+  - role: "직무 (예: Data Engineer)"
+    org: "회사명"
+    period: "2024.01 ~ 현재"
+    icon: "fas fa-building"
+  - role: "직무 (예: ML Intern)"
+    org: "기관명"
+    period: "2023.06 ~ 2023.12"
+    icon: "fas fa-flask"
+
+# 학력
+education:
+  - degree: "전공 / 학위"
+    org: "학교명"
+    period: "2019 ~ 2023"
+    icon: "fas fa-graduation-cap"
+
+# 스킬 그룹 — name 은 소제목, items 는 태그 목록
+skills:
+  - name: "Data Engineering"
+    items: [Python, SQL, Airflow, Spark, dbt]
+  - name: "Machine Learning"
+    items: [PyTorch, scikit-learn, Pandas, NumPy]
+  - name: "Tools"
+    items: [Git, Docker, AWS, "VS Code", Notion]
+
+# ─────────────────────────────────────────────────────────
+#  Work 프로젝트
+#  group 값이 곧 탭 이름이 됩니다. (같은 group 끼리 한 탭에 묶임)
+#  여기 적은 group 순서대로 탭이 왼쪽부터 생성됩니다.
+#  image 는 선택 — 없으면 제목이 적힌 빈 썸네일로 표시됩니다.
+# ─────────────────────────────────────────────────────────
+projects:
+  - group: "Data"
+    title: "ETL 파이프라인"
+    tag: "데이터 파이프라인"
+    desc: "Airflow 기반 일배치 데이터 파이프라인 구축"
+    link: "https://github.com/sinheechan/"
+    image: # "/assets/img/projects/etl.png"
+
+  - group: "Data"
+    title: "데이터 웨어하우스"
+    tag: "dbt 모델링"
+    desc: "분석용 데이터 마트 모델링"
+    link: "https://github.com/sinheechan/"
+    image:
+
+  - group: "ML"
+    title: "이탈 예측 모델"
+    tag: "분류 모델"
+    desc: "고객 이탈 예측 모델 학습 및 서빙"
+    link: "https://github.com/sinheechan/"
+    image:
+
+  - group: "ML"
+    title: "추천 시스템 실험"
+    tag: "추천 시스템"
+    desc: "협업 필터링 기반 추천 실험"
+    link: "https://github.com/sinheechan/"
+    image:
+
+  - group: "Web"
+    title: "이 블로그"
+    tag: "Jekyll · Chirpy"
+    desc: "GitHub Pages 기반 기술 블로그 커스터마이징"
+    link: "https://sinheechan.github.io"
+    image:
+
+contact:
+  email: "gmlcks0905@gmail.com"
+  github: "https://github.com/sinheechan"
+  # linkedin: "https://www.linkedin.com/in/..."
