@@ -34,7 +34,7 @@ education:
   - degree: "전공 / 학위"
     org: "학교명"
     period: "2019 ~ 2023"
-    icon: "fas fa-graduation-cap"
+    icon: "C:/Users/gmlck/sinheechan.github.io/icon/it_korea.jpeg"
 
 # 스킬 그룹 — name 은 소제목, items 는 태그 목록
 skills:
