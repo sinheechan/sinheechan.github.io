@@ -6,16 +6,6 @@ layout: default
 
 <div class="folio">
 
-  <!-- 섹션 내 이동 메뉴 (Chirpy 사이드바와 별개로 한 페이지 안에서 점프) -->
-  <nav class="folio-nav">
-    <a href="#folio-home">Home</a>
-    <a href="#folio-about">About</a>
-    <a href="#folio-skills">Skills</a>
-    <a href="#folio-work">Work</a>
-    {% if site.posts.size > 0 %}<a href="#folio-posts">Posts</a>{% endif %}
-    <a href="#folio-contact">Contact</a>
-  </nav>
-
   <!-- ══════════ HERO ══════════ -->
   <section id="folio-home" class="folio-hero">
     {% assign avatar = folio.profile.image | default: site.avatar %}

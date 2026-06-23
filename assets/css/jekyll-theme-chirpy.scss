@@ -702,4 +702,121 @@ pre {
   }
 }
 
+/* ══════════════════════════════════════════════
+   왼쪽 사이드바 제거 + 상단 가로 네비게이션
+   ══════════════════════════════════════════════ */
+
+/* 사이드바는 DOM 엔 남아있지만(JS 호환) 화면에서 숨김 */
+#sidebar {
+  display: none !important;
+}
+
+/* 사이드바 자리(왼쪽 여백) 제거 — 본문을 전체 폭으로 */
+#main-wrapper {
+  margin-left: 0 !important;
+}
+
+/* 모바일 햄버거 + 브레드크럼은 상단 메뉴가 대체하므로 숨김 (검색은 유지) */
+#sidebar-trigger,
+#topbar #breadcrumb {
+  display: none !important;
+}
+
+/* ── 상단 가로 네비게이션 ── */
+#folio-topnav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--main-bg);
+  border-bottom: 1px solid var(--card-border);
+  backdrop-filter: blur(8px);
+}
+.folio-topnav-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0.65rem 1rem;
+}
+.folio-brand {
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.03em;
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  flex: none;
+}
+.folio-brand:hover {
+  color: var(--folio-accent) !important;
+}
+.folio-topnav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+  flex: 1 1 auto;
+}
+.folio-topnav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted-color) !important;
+  text-decoration: none !important;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.folio-topnav-link:hover {
+  color: var(--folio-accent) !important;
+  background: var(--folio-accent-soft);
+}
+.folio-topnav-link.active {
+  color: var(--folio-accent) !important;
+  background: var(--folio-accent-soft);
+}
+.folio-mode-btn {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--text-color);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+  transition: all 0.15s ease;
+}
+.folio-mode-btn:hover {
+  border-color: var(--folio-accent);
+  color: var(--folio-accent);
+}
+
+/* 모바일: 메뉴가 좁으면 가로 스크롤로 처리 */
+@media (max-width: 768px) {
+  .folio-topnav-inner {
+    gap: 0.6rem;
+    padding: 0.55rem 0.8rem;
+  }
+  .folio-brand {
+    font-size: 0.95rem;
+  }
+  .folio-topnav-menu {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .folio-topnav-menu::-webkit-scrollbar {
+    display: none;
+  }
+  .folio-topnav-link {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.85rem;
+  }
+}
+
 // 수정본

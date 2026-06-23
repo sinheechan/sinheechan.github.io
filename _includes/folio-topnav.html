@@ -1,0 +1,33 @@
+<!-- 사이트 전체 상단 가로 네비게이션 (왼쪽 사이드바 대체) -->
+<header id="folio-topnav" aria-label="Site Navigation">
+  <div class="folio-topnav-inner">
+    <a class="folio-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+    <nav class="folio-topnav-menu" aria-label="Primary">
+      <a href="{{ '/' | relative_url }}" class="folio-topnav-link{% if page.layout == 'home' %} active{% endif %}">
+        {{ site.data.locales[include.lang].tabs.home | default: 'Home' | capitalize }}
+      </a>
+      {% for tab in site.tabs %}
+        {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+        <a href="{{ tab.url | relative_url }}" class="folio-topnav-link{% if tab.url == page.url %} active{% endif %}">
+          {{ site.data.locales[include.lang].tabs[tab_name] | default: tab.title }}
+        </a>
+      {% endfor %}
+    </nav>
+
+    <button type="button" id="folio-mode" class="folio-mode-btn" aria-label="Switch theme">
+      <i class="fas fa-adjust"></i>
+    </button>
+  </div>
+</header>
+
+<script>
+  (function () {
+    var proxy = document.getElementById('folio-mode');
+    if (!proxy) return;
+    proxy.addEventListener('click', function () {
+      var real = document.getElementById('mode-toggle'); // Chirpy 원본 토글(숨김 사이드바 안)
+      if (real) real.click();
+    });
+  })();
+</script>
