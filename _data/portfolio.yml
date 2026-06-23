@@ -6,7 +6,7 @@ profile:
   name: "신희찬 (Sinheechan)"
   tagline: "구조적인 파이프라인 설계와 협업을 중요시하며, 직관적인 코드를 지향하는 데이터 분석가입니다."
   # 프로필 이미지 (선택). assets/img/ 에 넣고 경로 지정. 없으면 이름 첫 글자 박스로 표시.
-  image: "C:/Users/gmlck/sinheechan.github.io/assets/css/img/증명사진.jpg"
+  image: "/assets/css/img/증명사진.jpg"
   badges:
     - Data Engineering
     - Python
@@ -35,7 +35,7 @@ education:
   - degree: "전공 / 학위"
     org: "학교명"
     period: "2019 ~ 2023"
-    icon: "C:/Users/gmlck/sinheechan.github.io/icon/it_korea.jpeg"
+    icon: "/assets/css/img/it_korea.jpeg"
 
 # 스킬 그룹 — name 은 소제목, items 는 태그 목록
 skills:
