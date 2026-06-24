@@ -62,7 +62,15 @@ layout: default
       <h3>Education</h3>
       {% for edu in folio.education %}
         <div class="folio-row">
-          <div class="folio-ico">{% if edu.icon %}<i class="{{ edu.icon }}"></i>{% else %}<i class="fas fa-graduation-cap"></i>{% endif %}</div>
+          <div class="folio-ico">
+            {% if edu.icon contains '/' %}
+              <img src="{{ edu.icon | relative_url }}" alt="{{ edu.org }}">
+            {% elsif edu.icon %}
+              <i class="{{ edu.icon }}"></i>
+            {% else %}
+              <i class="fas fa-graduation-cap"></i>
+            {% endif %}
+          </div>
           <div>
             <p class="folio-row-title">{{ edu.degree }}</p>
             <p class="folio-muted">{{ edu.org }}{% if edu.period %} · {{ edu.period }}{% endif %}</p>

@@ -331,6 +331,13 @@ pre {
     color: var(--folio-accent);
     background: var(--card-bg);
     border: 1px solid var(--card-border);
+    overflow: hidden;
+  }
+  .folio-ico img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   .folio-row-title {
     font-weight: 700;
