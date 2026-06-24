@@ -100,10 +100,12 @@ pre {
   border-radius: 0.6rem;
 }
 
-/* ── 검색창: 알약 형태 ── */
-#search-wrapper .search-input,
-#search-result-wrapper input {
-  border-radius: 2rem;
+/* ── 검색창 제거 ── */
+#search,
+#search-trigger,
+#search-cancel,
+#search-result-wrapper {
+  display: none !important;
 }
 
 /* ── 태그를 알약 버튼처럼 ── */

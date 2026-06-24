@@ -15,19 +15,38 @@
 
 <script>
   (function () {
-    /* 다크/라이트 토글: Chirpy 원본 버튼(숨김 사이드바 안)을 대신 클릭 */
+    /* 다크 / 라이트 토글:
+       Chirpy 의 #mode-toggle 은 드롭다운(라이트/다크/시스템)을 여는 버튼이라
+       한 번 클릭으로는 테마가 안 바뀐다. 대신 <html data-mode> 값을 보고
+       숨겨진 드롭다운 안의 실제 전환 버튼([data-theme-mode])을 눌러 토글한다. */
     var proxy = document.getElementById('folio-mode');
     if (proxy) {
       proxy.addEventListener('click', function () {
-        var real = document.getElementById('mode-toggle');
-        if (real) real.click();
+        var html = document.documentElement;
+        var mode = html.getAttribute('data-mode');
+
+        var isDark;
+        if (mode === 'dark') {
+          isDark = true;
+        } else if (mode === 'light') {
+          isDark = false;
+        } else {
+          isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }
+
+        var want = isDark ? 'light' : 'dark';
+        var realBtn = document.querySelector('[data-theme-mode="' + want + '"]');
+        if (realBtn) {
+          realBtn.click();
+        } else {
+          html.setAttribute('data-mode', want);
+          try { localStorage.setItem('mode', want); } catch (e) {}
+        }
       });
     }
 
+    /* 섹션 부드러운 스크롤 */
     var links = document.querySelectorAll('.folio-topnav-link[data-folio-link]');
-
-    /* 같은 페이지(홈)일 때만 부드러운 스크롤. 섹션이 없으면(다른 페이지)
-       기본 동작으로 홈+앵커 이동 */
     links.forEach(function (link) {
       link.addEventListener('click', function (e) {
         var id = this.getAttribute('data-folio-link');
@@ -40,13 +59,12 @@
       });
     });
 
-    /* 스크롤스파이: 현재 보고 있는 섹션 메뉴를 강조 */
+    /* 스크롤스파이: 현재 섹션 메뉴 강조 */
     var sections = [];
     links.forEach(function (link) {
       var el = document.getElementById(link.getAttribute('data-folio-link'));
       if (el) sections.push({ el: el, link: link });
     });
-
     if (sections.length) {
       var spy = function () {
         var pos = window.scrollY + 120;
