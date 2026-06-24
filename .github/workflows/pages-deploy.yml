@@ -17,10 +17,11 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# 배포 중 취소 금지 — cancel-in-progress: true 이면 Pages 큐에 등록된
+# 배포가 deployment_queued 에서 무한 대기 후 타임아웃됩니다.
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -37,7 +38,7 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
