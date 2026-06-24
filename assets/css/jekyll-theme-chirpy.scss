@@ -400,6 +400,32 @@ pre {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     padding: 6px;
+    display: block;
+    margin: 0;
+  }
+  .folio-skill-item .preview-img {
+    width: 52px;
+    height: 52px;
+    aspect-ratio: auto;
+    background: none;
+    animation: none;
+  }
+  .folio-skill-item .preview-img.shimmer::before,
+  .folio-skill-item .preview-img.shimmer::after {
+    content: none;
+    animation: none;
+    background: none;
+  }
+  .folio-skill-item .preview-img img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 6px;
+    display: block;
+    margin: 0;
   }
   .folio-skill-item span {
     font-size: 0.75rem;
