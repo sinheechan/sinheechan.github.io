@@ -6,7 +6,7 @@ profile:
   name: "신희찬 (Sinheechan)"
   tagline: "구조적인 파이프라인 설계와 협업을 중요시하며, 직관적인 코드를 지향하는 데이터 분석가입니다."
   # 프로필 이미지 (선택). assets/img/ 에 넣고 경로 지정. 없으면 이름 첫 글자 박스로 표시.
-  image: "/assets/img/porfile.jpg"
+  image: "/assets/img/profile.jpg"
   badges:
     - Data Engineering
     - Python
