@@ -711,9 +711,26 @@ pre {
   display: none !important;
 }
 
-/* 사이드바 자리(왼쪽 여백) 제거 — 본문을 전체 폭으로 */
+/* 사이드바 자리(왼쪽 여백) 제거 — 본문을 가운데 정렬, 고정 폭으로 */
 #main-wrapper {
   margin-left: 0 !important;
+}
+
+/* Chirpy 의 container 최대폭은 사이드바를 뺀 값으로 계산되어 있어서,
+   사이드바를 없애면 폭 제한이 풀려 화면 끝까지 늘어나 버림 → 직접 고정 */
+#main-wrapper > .container {
+  max-width: 1250px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.75rem !important;
+  padding-right: 1.75rem !important;
+}
+
+@media (max-width: 768px) {
+  #main-wrapper > .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
 /* 모바일 햄버거 + 브레드크럼은 상단 메뉴가 대체하므로 숨김 (검색은 유지) */
