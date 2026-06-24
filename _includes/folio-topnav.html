@@ -23,25 +23,14 @@
     if (proxy) {
       proxy.addEventListener('click', function () {
         var html = document.documentElement;
-        var mode = html.getAttribute('data-mode');
-
-        var isDark;
-        if (mode === 'dark') {
-          isDark = true;
-        } else if (mode === 'light') {
-          isDark = false;
-        } else {
-          isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        }
-
-        var want = isDark ? 'light' : 'dark';
-        var realBtn = document.querySelector('[data-theme-mode="' + want + '"]');
-        if (realBtn) {
-          realBtn.click();
-        } else {
-          html.setAttribute('data-mode', want);
-          try { localStorage.setItem('mode', want); } catch (e) {}
-        }
+        var current = html.getAttribute('data-mode')
+          || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var want = current === 'dark' ? 'light' : 'dark';
+        /* Chirpy 내부와 동일하게 data-mode + sessionStorage 동시 갱신 후
+           postMessage 로 theme-mode 이벤트를 발행해 Chirpy 리스너에 알린다. */
+        html.setAttribute('data-mode', want);
+        try { sessionStorage.setItem('mode', want); } catch (e) {}
+        window.postMessage({ id: 'theme-mode' }, '*');
       });
     }
 
