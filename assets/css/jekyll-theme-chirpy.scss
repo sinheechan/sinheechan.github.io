@@ -227,6 +227,35 @@ pre {
     font-weight: 800;
     background: linear-gradient(135deg, var(--folio-accent), var(--folio-accent-2));
   }
+
+  /* Chirpy 가 이미지를 자동으로 감싸는 lazy-load 래퍼(.preview-img.shimmer)
+     크기를 150x150 으로 고정. (이게 없으면 래퍼가 화면 폭 전체로 늘어나
+     큰 빈 박스 + shimmer 배경이 그대로 남는다) */
+  .folio-hero .preview-img {
+    width: 150px;
+    height: 150px;
+    aspect-ratio: auto;
+    margin-bottom: 1.1rem;
+    border-radius: 18px;
+    overflow: hidden;
+    background: none;
+    animation: none;
+  }
+  .folio-hero .preview-img.shimmer::before,
+  .folio-hero .preview-img.shimmer::after {
+    content: none;
+    animation: none;
+    background: none;
+  }
+  .folio-hero .preview-img img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0;
+    border-radius: 18px;
+    object-fit: cover;
+    display: block;
+  }
+
   .folio-hero h1 {
     font-size: 1.9rem;
     font-weight: 800;
