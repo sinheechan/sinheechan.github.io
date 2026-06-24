@@ -16,14 +16,14 @@
 
 /* ── 포인트 컬러: 라이트/다크 자동 전환 (Chirpy 토글 방식 그대로) ── */
 @mixin folio-light {
-  --folio-accent: #a81e2a;
-  --folio-accent-2: #c8324a;
-  --folio-accent-soft: rgba(168, 30, 42, 0.1);
+  --folio-accent: #047857;
+  --folio-accent-2: #10b981;
+  --folio-accent-soft: rgba(4, 120, 87, 0.1);
 }
 @mixin folio-dark {
-  --folio-accent: #e0566a;
-  --folio-accent-2: #f5bbda;
-  --folio-accent-soft: rgba(224, 86, 106, 0.14);
+  --folio-accent: #34d399;
+  --folio-accent-2: #a7f3d0;
+  --folio-accent-soft: rgba(52, 211, 153, 0.16);
 }
 html {
   @media (prefers-color-scheme: light) {
