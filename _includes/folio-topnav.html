@@ -1,20 +1,12 @@
-<!-- 사이트 전체 상단 가로 네비게이션 (왼쪽 사이드바 대체) -->
 <header id="folio-topnav" aria-label="Site Navigation">
   <div class="folio-topnav-inner">
     <a class="folio-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-
     <nav class="folio-topnav-menu" aria-label="Primary">
-      <a href="{{ '/' | relative_url }}" class="folio-topnav-link{% if page.layout == 'home' %} active{% endif %}">
-        {{ site.data.locales[include.lang].tabs.home | default: 'Home' | capitalize }}
-      </a>
-      {% for tab in site.tabs %}
-        {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-        <a href="{{ tab.url | relative_url }}" class="folio-topnav-link{% if tab.url == page.url %} active{% endif %}">
-          {{ site.data.locales[include.lang].tabs[tab_name] | default: tab.title }}
-        </a>
-      {% endfor %}
+      <a href="{{ '/#folio-about' | relative_url }}" class="folio-topnav-link" data-folio-link="folio-about">About Me</a>
+      <a href="{{ '/#folio-skills' | relative_url }}" class="folio-topnav-link" data-folio-link="folio-skills">Skills</a>
+      <a href="{{ '/#folio-work' | relative_url }}" class="folio-topnav-link" data-folio-link="folio-work">Work</a>
+      <a href="{{ '/#folio-contact' | relative_url }}" class="folio-topnav-link" data-folio-link="folio-contact">Contact</a>
     </nav>
-
     <button type="button" id="folio-mode" class="folio-mode-btn" aria-label="Switch theme">
       <i class="fas fa-adjust"></i>
     </button>
@@ -23,11 +15,50 @@
 
 <script>
   (function () {
+    /* 다크/라이트 토글: Chirpy 원본 버튼(숨김 사이드바 안)을 대신 클릭 */
     var proxy = document.getElementById('folio-mode');
-    if (!proxy) return;
-    proxy.addEventListener('click', function () {
-      var real = document.getElementById('mode-toggle'); // Chirpy 원본 토글(숨김 사이드바 안)
-      if (real) real.click();
+    if (proxy) {
+      proxy.addEventListener('click', function () {
+        var real = document.getElementById('mode-toggle');
+        if (real) real.click();
+      });
+    }
+
+    var links = document.querySelectorAll('.folio-topnav-link[data-folio-link]');
+
+    /* 같은 페이지(홈)일 때만 부드러운 스크롤. 섹션이 없으면(다른 페이지)
+       기본 동작으로 홈+앵커 이동 */
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var id = this.getAttribute('data-folio-link');
+        var target = document.getElementById(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', '#' + id);
+        }
+      });
     });
+
+    /* 스크롤스파이: 현재 보고 있는 섹션 메뉴를 강조 */
+    var sections = [];
+    links.forEach(function (link) {
+      var el = document.getElementById(link.getAttribute('data-folio-link'));
+      if (el) sections.push({ el: el, link: link });
+    });
+
+    if (sections.length) {
+      var spy = function () {
+        var pos = window.scrollY + 120;
+        var current = null;
+        sections.forEach(function (s) {
+          if (s.el.offsetTop <= pos) current = s;
+        });
+        links.forEach(function (l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+      };
+      window.addEventListener('scroll', spy, { passive: true });
+      spy();
+    }
   })();
 </script>
