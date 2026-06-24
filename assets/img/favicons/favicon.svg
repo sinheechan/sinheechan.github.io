@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .bg { fill: #047857; }
+      .letter { fill: #ffffff; }
+      @media (prefers-color-scheme: dark) {
+        .bg { fill: #047857; }
+        .letter { fill: #ffffff; }
+      }
+    </style>
+  </defs>
+  <rect class="bg" width="512" height="512" rx="102"/>
+  <text class="letter" x="256" y="382" font-family="Segoe UI,Arial,sans-serif"
+        font-weight="700" font-size="340" text-anchor="middle">S</text>
+</svg>

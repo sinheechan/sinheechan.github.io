@@ -1,0 +1,10 @@
+{
+  "name": "Sinheechan 지식노트",
+  "short_name": "Sinheechan",
+  "icons": [
+    { "src": "/assets/img/favicons/favicon-96x96.png", "sizes": "96x96", "type": "image/png" }
+  ],
+  "theme_color": "#047857",
+  "background_color": "#047857",
+  "display": "standalone"
+}

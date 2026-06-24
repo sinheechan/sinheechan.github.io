@@ -7,33 +7,11 @@
       <a href="{{ '/#folio-work' | relative_url }}" class="folio-topnav-link" data-folio-link="folio-work">Work</a>
       <a href="{{ '/#folio-contact' | relative_url }}" class="folio-topnav-link" data-folio-link="folio-contact">Contact</a>
     </nav>
-    <button type="button" id="folio-mode" class="folio-mode-btn" aria-label="Switch theme">
-      <i class="fas fa-adjust"></i>
-    </button>
   </div>
 </header>
 
 <script>
   (function () {
-    /* 다크 / 라이트 토글:
-       Chirpy 의 #mode-toggle 은 드롭다운(라이트/다크/시스템)을 여는 버튼이라
-       한 번 클릭으로는 테마가 안 바뀐다. 대신 <html data-mode> 값을 보고
-       숨겨진 드롭다운 안의 실제 전환 버튼([data-theme-mode])을 눌러 토글한다. */
-    var proxy = document.getElementById('folio-mode');
-    if (proxy) {
-      proxy.addEventListener('click', function () {
-        var html = document.documentElement;
-        var current = html.getAttribute('data-mode')
-          || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        var want = current === 'dark' ? 'light' : 'dark';
-        /* Chirpy 내부와 동일하게 data-mode + sessionStorage 동시 갱신 후
-           postMessage 로 theme-mode 이벤트를 발행해 Chirpy 리스너에 알린다. */
-        html.setAttribute('data-mode', want);
-        try { sessionStorage.setItem('mode', want); } catch (e) {}
-        window.postMessage({ id: 'theme-mode' }, '*');
-      });
-    }
-
     /* 섹션 부드러운 스크롤 */
     var links = document.querySelectorAll('.folio-topnav-link[data-folio-link]');
     links.forEach(function (link) {
