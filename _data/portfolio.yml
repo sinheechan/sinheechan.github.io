@@ -7,11 +7,6 @@ profile:
   tagline: "구조적인 파이프라인 설계와 협업을 중요시하며, 직관적인 코드를 지향하는 데이터 분석가입니다."
   # 프로필 이미지 (선택). assets/img/ 에 넣고 경로 지정. 없으면 이름 첫 글자 박스로 표시.
   image: "/assets/img/profile.jpg"
-  badges:
-    - Data Engineering
-    - Python
-    - R
-    - SQL
 
 about:
   intro:
@@ -39,12 +34,8 @@ education:
 
 # 스킬 그룹 — name 은 소제목, items 는 태그 목록
 skills:
-  - name: "Data Engineering"
-    items: [Python, SQL, Airflow, Spark, dbt]
-  - name: "Machine Learning"
-    items: [PyTorch, scikit-learn, Pandas, NumPy]
-  - name: "Tools"
-    items: [Git, Docker, AWS, "VS Code", Notion]
+  - name: "Skills"
+    items: [Python, SQL, PyTorch, scikit-learn]
 
 
 #  Work 프로젝트
