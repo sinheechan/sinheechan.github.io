@@ -38,7 +38,17 @@ education:
 
 # 스킬 그룹 — name 은 소제목, items 는 태그 목록
 skills:
-  - items: [Python, SQL, PyTorch, scikit-learn]
+  - items:
+    - name: Python
+      image: /assets/img/python.png
+    - name: R
+      image: /assets/img/r.png
+    - name: SQL
+      image: /assets/img/postgresql.png
+    - name: PyTorch
+      image: /assets/img/pytorch.png
+    - name: scikit-learn
+      image: /assets/img/scikitlearn.png
 
 
 #  Work 프로젝트

@@ -90,8 +90,15 @@ layout: default
     {% for group in folio.skills %}
       <div class="folio-bundle">
         {% if group.name %}<h3>{{ group.name }}</h3>{% endif %}
-        <div class="folio-tags">
-          {% for item in group.items %}<span>{{ item }}</span>{% endfor %}
+        <div class="folio-skill-grid">
+          {% for item in group.items %}
+            <div class="folio-skill-item">
+              {% if item.image %}
+                <img src="{{ item.image | relative_url }}" alt="{{ item.name }}">
+              {% endif %}
+              <span>{{ item.name | default: item }}</span>
+            </div>
+          {% endfor %}
         </div>
       </div>
     {% endfor %}
