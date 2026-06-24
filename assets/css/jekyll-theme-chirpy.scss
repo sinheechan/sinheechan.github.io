@@ -183,11 +183,13 @@ pre {
   .folio-devider {
     border: 0;
     border-top: 1px solid var(--card-border);
-    margin: 2.6rem 0;
+    margin: 3.6rem 0;
   }
   .folio-muted {
     color: var(--text-muted-color);
     font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.5;
   }
   .folio-section {
     scroll-margin-top: 4rem;
@@ -197,14 +199,14 @@ pre {
     font-size: 1.85rem;
     font-weight: 800;
     letter-spacing: -0.03em;
-    margin: 0 0 1.6rem;
+    margin: 0 0 2rem;
     padding: 0;
     border: 0;
   }
   .folio-section h3 {
     font-size: 1.15rem;
     font-weight: 700;
-    margin: 0 0 0.4rem;
+    margin: 0 0 0.75rem;
   }
 
   /* ── 히어로 ── */
@@ -294,19 +296,29 @@ pre {
 
   /* ── About / Skills 묶음 ── */
   .folio-bundle {
-    margin-bottom: 1.6rem;
+    margin-bottom: 2rem;
   }
   .folio-bundle > p {
-    line-height: 1.75;
-    margin-bottom: 0.4rem;
+    line-height: 1.9;
+    margin-bottom: 0.6rem;
     color: #ffffff;
     font-weight: 700;
   }
   .folio-row {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 0.9rem;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+  }
+  .folio-row > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+  }
+  .folio-row p {
+    margin: 0;
+    line-height: 1.4;
   }
   .folio-ico {
     flex: none;

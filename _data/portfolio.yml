@@ -34,8 +34,7 @@ education:
 
 # 스킬 그룹 — name 은 소제목, items 는 태그 목록
 skills:
-  - name: "Skills"
-    items: [Python, SQL, PyTorch, scikit-learn]
+  - items: [Python, SQL, PyTorch, scikit-learn]
 
 
 #  Work 프로젝트
