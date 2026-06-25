@@ -135,21 +135,21 @@ layout: default
       {% assign items = folio.projects | where: 'group', g %}
       <div class="folio-pane{% if forloop.first %} show{% endif %}" data-pane="{{ forloop.index0 }}">
         {% for p in items %}
+          {% assign card_link = p.link %}
+          {% if card_link == '' or card_link == nil %}
+            {% if p.tag %}
+              {% assign card_link = '/tags/' | append: p.tag | append: '/' %}
+            {% endif %}
+          {% endif %}
           <div class="folio-card">
             {% if p.image %}
-              <a href="{{ p.link | default: '#' }}" target="_blank" rel="noreferrer" class="folio-thumb-link">
+              <a href="{{ card_link | default: '#' | relative_url }}" {% if p.link %}target="_blank" rel="noreferrer"{% endif %} class="folio-thumb-link">
                 <div class="folio-thumb" style="background-image:url('{{ p.image | relative_url }}')"></div>
               </a>
             {% else %}
               <div class="folio-thumb folio-thumb-empty">{{ p.title }}</div>
             {% endif %}
             <div class="folio-card-body">
-              {% assign card_link = p.link %}
-              {% if card_link == '' or card_link == nil %}
-                {% if p.tag %}
-                  {% assign card_link = '/tags/' | append: p.tag | append: '/' %}
-                {% endif %}
-              {% endif %}
               {% if card_link %}
                 {% if p.link %}
                   <a class="folio-link" href="{{ card_link }}" target="_blank" rel="noreferrer">⇢ Link</a>
