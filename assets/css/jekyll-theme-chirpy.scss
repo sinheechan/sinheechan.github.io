@@ -209,6 +209,16 @@ pre {
     color: #ffffff;
     margin: 0 0 0.5rem;
   }
+  /* What I Enjoy · Work Experience · Education 소제목 (h2 → 흰색 볼드) */
+  .folio-bundle h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    border: 0;
+    letter-spacing: 0;
+  }
 
   /* ── 히어로 ── */
   .folio-hero {
@@ -302,8 +312,8 @@ pre {
     margin-bottom: 1.5rem;
   }
   .folio-bundle > p {
-    line-height: 1.5;
-    margin-bottom: 0;
+    line-height: 1.3;
+    margin: 0;
     color: var(--text-muted-color);
     font-weight: 400;
     font-size: 0.92rem;
