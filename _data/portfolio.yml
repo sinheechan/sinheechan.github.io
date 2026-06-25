@@ -16,17 +16,17 @@ about:
 
 # 경력 (위에서부터 최신순). icon 은 Font Awesome 클래스 또는 이미지 경로 (선택).
 experience:
-  - role: "SmartBank"
+  - role: "(주)Smartbank"
     org: "Data Engineer"
     period: "2024. 11 ~ 재직 중"
     icon: "/assets/img/smartbank.png"
 
-  - role: "PROGRESS MEDIA"
+  - role: "(주)PROGRESS MEDIA"
     org: "데이터 분석 AM"
     period: "2024. 06 ~ 2024. 11"
     icon: "/assets/img/progress_media.png"
 
-  - role: "IVE KOREA"
+  - role: "(주)IVE KOREA"
     org: "데이터 분석 AM"
     period: "2022. 07 ~ 2023. 08"
     icon: "/assets/img/Ivekorea.jpg"
