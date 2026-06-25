@@ -147,8 +147,7 @@ layout: default
               {% assign card_link = p.link %}
               {% if card_link == '' or card_link == nil %}
                 {% if p.tag %}
-                  {% assign tag_slug = p.tag | downcase | replace: ' ', '-' %}
-                  {% assign card_link = '/tags/#' | append: tag_slug %}
+                  {% assign card_link = '/tags/' | append: p.tag | append: '/' %}
                 {% endif %}
               {% endif %}
               {% if card_link %}
