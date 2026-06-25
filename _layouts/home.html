@@ -37,14 +37,14 @@ layout: default
 
     {% if folio.about.enjoy %}
     <div class="folio-bundle">
-      <h3>What I Enjoy</h3>
+      <h2>What I Enjoy</h2>
       <p class="folio-muted">{{ folio.about.enjoy }}</p>
     </div>
     {% endif %}
 
     {% if folio.experience %}
     <div class="folio-bundle">
-      <h3>Work Experience</h3>
+      <h2>Work Experience</h2>
       {% for job in folio.experience %}
         <div class="folio-row folio-row--exp">
           <div class="folio-ico">
@@ -72,7 +72,7 @@ layout: default
 
     {% if folio.education %}
     <div class="folio-bundle">
-      <h3>Education</h3>
+      <h2>Education</h2>
       {% for edu in folio.education %}
         <div class="folio-row">
           <div class="folio-ico">
