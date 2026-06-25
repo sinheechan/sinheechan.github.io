@@ -92,11 +92,11 @@ projects:
     image:
 
   - group: "Study"
-    title: "/assets/img/study.png"
+    title:
     tag: "Python"
     desc: "데이터와 AI 알고리즘의 원리 및 연구사례 학습"
     link: "https://sinheechan.github.io"
-    image:
+    image: "/assets/img/study.png"
 
 contact:
   email: "gmlcks0905@gmail.com"
