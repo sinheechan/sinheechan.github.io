@@ -144,7 +144,20 @@ layout: default
               <div class="folio-thumb folio-thumb-empty">{{ p.title }}</div>
             {% endif %}
             <div class="folio-card-body">
-              {% if p.link %}<a class="folio-link" href="{{ p.link }}" target="_blank" rel="noreferrer">⇢ Link</a>{% endif %}
+              {% assign card_link = p.link %}
+              {% if card_link == '' or card_link == nil %}
+                {% if p.tag %}
+                  {% assign tag_slug = p.tag | downcase | replace: ' ', '-' %}
+                  {% assign card_link = '/tags/#' | append: tag_slug %}
+                {% endif %}
+              {% endif %}
+              {% if card_link %}
+                {% if p.link %}
+                  <a class="folio-link" href="{{ card_link }}" target="_blank" rel="noreferrer">⇢ Link</a>
+                {% else %}
+                  <a class="folio-link" href="{{ card_link | relative_url }}">⇢ Posts</a>
+                {% endif %}
+              {% endif %}
               {% if p.tag %}<p class="folio-tag">{{ p.tag }}</p>{% endif %}
               {% if p.title and p.image %}<p class="folio-card-title">{{ p.title }}</p>{% endif %}
               <p class="folio-desc">{{ p.desc }}</p>
