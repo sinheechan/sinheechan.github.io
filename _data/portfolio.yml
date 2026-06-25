@@ -35,7 +35,7 @@ experience:
 education:
   - degree: "AI 빅데이터 과정 수료"
     org: "KOREA IT ACADEMY"
-    period: "2023. 11 ~ 2024. 05"
+    period: "2023. 10 ~ 2024. 05"
     icon: "/assets/img/it_korea.jpeg"
   - degree: "(주) 경제학과 / (부) 광고홍보학과"
     org: "한남대학교"
@@ -91,10 +91,10 @@ projects:
     link: "https://github.com/sinheechan/"
     image:
 
-  - group: "Web"
-    title: "이 블로그"
-    tag: "Jekyll · Chirpy"
-    desc: "GitHub Pages 기반 기술 블로그 커스터마이징"
+  - group: "Study"
+    title: "/assets/img/study.png"
+    tag: "Python"
+    desc: "데이터와 AI 알고리즘의 원리 및 연구사례 학습"
     link: "https://sinheechan.github.io"
     image:
 
