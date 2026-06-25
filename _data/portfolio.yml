@@ -33,14 +33,14 @@ experience:
 
 # 학력
 education:
-  - degree: "(주) 경제학과 / (부) 광고홍보학과"
-    org: "한남대학교"
-    period: "2015. 03 ~ 2024. 02 · GPA 3.52 / 4.5"
-    icon: "/assets/img/university.jpg"
   - degree: "AI 빅데이터 과정 수료"
     org: "KOREA IT ACADEMY"
     period: "2023. 11 ~ 2024. 05"
     icon: "/assets/img/it_korea.jpeg"
+  - degree: "(주) 경제학과 / (부) 광고홍보학과"
+    org: "한남대학교"
+    period: "2015. 03 ~ 2022. 02 · 학점 3.52 / 4.5"
+    icon: "/assets/img/university.jpg"
 
 # 스킬 그룹 — name 은 소제목, items 는 태그 목록
 skills:
