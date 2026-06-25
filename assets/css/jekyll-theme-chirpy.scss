@@ -199,15 +199,15 @@ pre {
     font-size: 1.85rem;
     font-weight: 800;
     letter-spacing: -0.03em;
-    margin: 0 0 2rem;
+    margin: 0 0 1.4rem;
     padding: 0;
     border: 0;
   }
   .folio-section h3 {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: #ffffff;
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
   }
 
   /* ── 히어로 ── */
@@ -264,15 +264,17 @@ pre {
   .folio-hero h1 {
     font-size: 1.9rem;
     font-weight: 800;
+    color: #ffffff;
     letter-spacing: -0.03em;
-    margin: 0 0 0.6rem;
+    margin: 0 0 0.4rem;
   }
   .folio-hero > p {
-    font-size: 1rem;
-    color: #ffffff;
-    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--text-muted-color);
+    font-weight: 400;
     max-width: 640px;
-    line-height: 1.7;
+    line-height: 1.6;
+    margin: 0;
   }
   .folio-badges {
     display: flex;
@@ -297,13 +299,14 @@ pre {
 
   /* ── About / Skills 묶음 ── */
   .folio-bundle {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   .folio-bundle > p {
-    line-height: 1.6;
-    margin-bottom: 0.2rem;
-    color: #ffffff;
-    font-weight: 700;
+    line-height: 1.65;
+    margin-bottom: 0.25rem;
+    color: var(--text-muted-color);
+    font-weight: 400;
+    font-size: 0.92rem;
   }
   .folio-row {
     display: flex;
