@@ -665,7 +665,17 @@ pre {
 
 /* ══════════ 태그 대시보드 ══════════ */
 #tag-dash {
-  --td-accent: var(--link-color);
+  --td-accent: var(--folio-accent);
+
+  .td-page-title {
+    color: var(--folio-accent);
+    font-size: 1.85rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 2rem;
+    padding: 0;
+    border: 0;
+  }
 
   /* 통계 카드 */
   .td-stats {

@@ -1,0 +1,174 @@
+---
+layout: default
+---
+
+<div id="tag-dash">
+
+  <h1 class="td-page-title">태그</h1>
+
+  <!-- ── 통계 카드 ── -->
+  <div class="td-stats">
+    <div class="td-stat">
+      <span class="td-stat-num">{{ site.posts.size }}</span>
+      <p class="td-stat-label">전체 포스트</p>
+    </div>
+    <div class="td-stat">
+      <span class="td-stat-num">{{ site.tags.size }}</span>
+      <p class="td-stat-label">태그</p>
+    </div>
+    <div class="td-stat">
+      <span class="td-stat-num">{{ site.categories.size }}</span>
+      <p class="td-stat-label">카테고리</p>
+    </div>
+  </div>
+
+  <!-- ── 태그 필터 클라우드 ── -->
+  <div class="td-section">
+    <h2 class="td-heading">태그 필터</h2>
+    <div class="td-cloud">
+      {% assign sorted_tags = site.tags | sort %}
+      {% for tag in sorted_tags %}
+        <button class="td-chip" data-tag="{{ tag[0] }}">
+          {{ tag[0] }}<span class="td-chip-n">{{ tag[1].size }}</span>
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- ── 포스트 테이블 ── -->
+  <div class="td-section">
+    <h2 class="td-heading">포스트</h2>
+
+    <div class="td-controls">
+      <input class="td-search" id="td-search" type="search" placeholder="제목으로 검색...">
+      <div class="td-sort">
+        <button class="td-sort-btn active" data-sort="date">최신순</button>
+        <button class="td-sort-btn" data-sort="title">제목순</button>
+      </div>
+    </div>
+
+    <div class="td-active-filter" id="td-active-filter" style="display:none">
+      태그: <strong id="td-filter-label"></strong>
+      <button onclick="clearTagFilter()">✕ 필터 해제</button>
+    </div>
+
+    <table class="td-table">
+      <thead>
+        <tr>
+          <th>제목</th>
+          <th>태그</th>
+          <th>날짜</th>
+        </tr>
+      </thead>
+      <tbody id="td-tbody">
+        {% for post in site.posts %}
+        <tr
+          data-title="{{ post.title | downcase | escape }}"
+          data-tags="{{ post.tags | join: '|' }}"
+          data-date="{{ post.date | date: '%Y%m%d' }}"
+        >
+          <td><a href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
+          <td>
+            {% for tag in post.tags %}
+              <span class="td-tag-mini" data-tag="{{ tag }}">{{ tag }}</span>
+            {% endfor %}
+          </td>
+          <td class="td-date">{{ post.date | date: '%Y.%m.%d' }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="td-empty" id="td-empty" style="display:none">검색 결과가 없습니다.</div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var activeTag   = null;
+  var rows        = Array.from(document.querySelectorAll('#td-tbody tr'));
+  var chips       = document.querySelectorAll('.td-chip');
+  var searchEl    = document.getElementById('td-search');
+  var filterBar   = document.getElementById('td-active-filter');
+  var filterLabel = document.getElementById('td-filter-label');
+  var emptyEl     = document.getElementById('td-empty');
+  var sortBtns    = document.querySelectorAll('.td-sort-btn');
+
+  /* ── 필터 + 검색 적용 ── */
+  function applyFilters() {
+    var q = searchEl.value.toLowerCase().trim();
+    var visible = 0;
+    rows.forEach(function (row) {
+      var title = row.getAttribute('data-title');
+      var tags  = row.getAttribute('data-tags').split('|');
+      var okTag    = !activeTag || tags.some(function (t) {
+        return t.toLowerCase() === activeTag.toLowerCase();
+      });
+      var okSearch = !q || title.includes(q);
+      if (okTag && okSearch) { row.style.display = ''; visible++; }
+      else                   { row.style.display = 'none'; }
+    });
+    emptyEl.style.display = visible === 0 ? '' : 'none';
+  }
+
+  /* ── 정렬 ── */
+  function sortRows(mode) {
+    var tbody  = document.getElementById('td-tbody');
+    var sorted = rows.slice().sort(function (a, b) {
+      if (mode === 'date') {
+        return b.getAttribute('data-date').localeCompare(a.getAttribute('data-date'));
+      }
+      return a.getAttribute('data-title').localeCompare(b.getAttribute('data-title'), 'ko');
+    });
+    sorted.forEach(function (r) { tbody.appendChild(r); });
+  }
+
+  /* ── 태그 칩 클릭 ── */
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var tag = chip.getAttribute('data-tag');
+      if (activeTag && activeTag.toLowerCase() === tag.toLowerCase()) {
+        clearTagFilter();
+      } else {
+        activeTag = tag;
+        chips.forEach(function (c) { c.classList.remove('on'); });
+        chip.classList.add('on');
+        filterLabel.textContent = tag;
+        filterBar.style.display = 'flex';
+        applyFilters();
+      }
+    });
+  });
+
+  /* ── 테이블 내 미니 태그 클릭 ── */
+  document.querySelectorAll('.td-tag-mini').forEach(function (mini) {
+    mini.addEventListener('click', function () {
+      var tag  = mini.getAttribute('data-tag');
+      var chip = document.querySelector('.td-chip[data-tag="' + tag + '"]');
+      if (chip) { chip.click(); }
+    });
+  });
+
+  /* ── 검색 ── */
+  searchEl.addEventListener('input', applyFilters);
+
+  /* ── 정렬 버튼 ── */
+  sortBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      sortBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      sortRows(btn.getAttribute('data-sort'));
+    });
+  });
+
+  /* ── 필터 해제 (전역 노출) ── */
+  window.clearTagFilter = function () {
+    activeTag = null;
+    chips.forEach(function (c) { c.classList.remove('on'); });
+    filterBar.style.display = 'none';
+    filterLabel.textContent = '';
+    applyFilters();
+  };
+})();
+</script>
