@@ -46,11 +46,24 @@ layout: default
     <div class="folio-bundle">
       <h3>Experience</h3>
       {% for job in folio.experience %}
-        <div class="folio-row">
-          <div class="folio-ico">{% if job.icon %}<i class="{{ job.icon }}"></i>{% else %}<i class="fas fa-building"></i>{% endif %}</div>
-          <div>
+        <div class="folio-row folio-row--exp">
+          <div class="folio-ico">
+            {% if job.icon contains '/' %}
+              <img src="{{ job.icon | relative_url }}" alt="{{ job.org }}">
+            {% elsif job.icon %}
+              <i class="{{ job.icon }}"></i>
+            {% else %}
+              <i class="fas fa-building"></i>
+            {% endif %}
+          </div>
+          <div class="folio-row-content">
             <p class="folio-row-title">{{ job.role }}</p>
             <p class="folio-muted">{{ job.org }}{% if job.period %} · {{ job.period }}{% endif %}</p>
+            {% if job.bullets %}
+            <ul class="folio-bullets">
+              {% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}
+            </ul>
+            {% endif %}
           </div>
         </div>
       {% endfor %}

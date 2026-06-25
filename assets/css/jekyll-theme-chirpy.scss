@@ -359,11 +359,32 @@ pre {
     display: block;
     margin: 0;
   }
+  .folio-row--exp {
+    align-items: flex-start;
+  }
+  .folio-row-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
   .folio-row-title {
     font-weight: 700;
     font-size: 0.97rem;
     margin: 0;
     color: #ffffff;
+  }
+  .folio-bullets {
+    margin: 0.45rem 0 0 0;
+    padding-left: 1.1rem;
+    list-style: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .folio-bullets li {
+    font-size: 0.83rem;
+    color: var(--text-muted-color);
+    line-height: 1.55;
   }
   .folio-tags {
     display: flex;

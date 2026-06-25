@@ -14,16 +14,33 @@ about:
     - "재현 가능하고 읽기 좋은 코드를 지향합니다."
   enjoy: "축구, 영화보기"
 
-# 경력 (위에서부터 최신순). icon 은 Font Awesome 클래스 (선택).
+# 경력 (위에서부터 최신순). icon 은 Font Awesome 클래스 또는 이미지 경로 (선택).
 experience:
-  - role: "직무 (예: Data Engineer)"
-    org: "회사명"
-    period: "2024.01 ~ 현재"
-    icon: "fas fa-building"
-  - role: "직무 (예: ML Intern)"
-    org: "기관명"
-    period: "2023.06 ~ 2023.12"
-    icon: "fas fa-flask"
+  - role: "Data Engineer"
+    org: "SmartBank"
+    period: "2024. 11 ~ 재직 중"
+    icon: "/assets/img/smartbank.png"
+    bullets:
+      - "국방·정부 R&D 프로젝트 기반 데이터 수집·정제·가공 및 AI 모델 학습 자동화 파이프라인 설계·개발"
+      - "비정형 원천 데이터 ETL 처리 및 품질 검증 체계 구축으로 모델 학습 데이터 신뢰성 확보"
+      - "기술 사양서 및 사업 문서 작성으로 개발 프로세스 표준화 기여"
+
+  - role: "Marketing Data Analyst"
+    org: "PROGRESS MEDIA"
+    period: "2024. 06 ~ 2024. 11"
+    icon: "/assets/img/progress_media.png"
+    bullets:
+      - "Looker Studio 기반 마케팅 집행 데이터 대시보드 구축 및 KPI 지표 시각화·리포팅 자동화"
+
+  - role: "Digital Marketing Analyst"
+    org: "IVE KOREA"
+    period: "2022. 07 ~ 2023. 08"
+    icon: "/assets/img/Ivekorea.jpg"
+    bullets:
+      - "Naver·Meta·Google 멀티 채널 광고 데이터 수집 및 CTR·ROAS·CPA 성과 지표 분석"
+      - "매체별 일간·주간·월간 통합 마케팅 퍼포먼스 리포트 작성 및 채널 인사이트 도출"
+      - "광고 예산 Media Mix 최적화를 통한 채널별 ROI 비교·분배 전략 수립"
+      - "시장 조사 기반 데이터 드리븐 온·오프라인 마케팅 기획 및 제안"
 
 # 학력
 education:
