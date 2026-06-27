@@ -29,7 +29,7 @@ layout: compress
         {% include topbar.html lang=lang %}
 
         <div class="row flex-grow-1">
-          <main aria-label="Main Content" class="col-12 col-lg-9 px-md-4">
+          <main aria-label="Main Content" class="col-12 px-md-4">
             {% if layout.layout == 'default' %}
               {% include refactor-content.html content=content lang=lang %}
             {% else %}
@@ -38,7 +38,7 @@ layout: compress
           </main>
 
           <!-- panel -->
-          <aside aria-label="Panel" id="panel-wrapper" class="col-lg-3 ps-2 text-muted">
+          <aside aria-label="Panel" id="panel-wrapper" class="ps-2 text-muted">
             <div class="access">
               {% include_cached update-list.html lang=lang %}
               {% include_cached trending-tags.html lang=lang %}

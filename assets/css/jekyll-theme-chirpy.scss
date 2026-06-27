@@ -1071,19 +1071,39 @@ pre {
 /* ══════════════════════════════════════════════
    포스트 오른쪽 목차(TOC) 패널
    - 최근 업데이트 / 인기 태그 숨김 → TOC만 표시
-   - xl(≥1200px) 에서 Chirpy 기본 동작 유지
+   - lg(≥992px)에서 직접 Flexbox로 오른쪽 배치
+     (Chirpy가 Bootstrap grid를 덮어써서 col-lg-* 사용 불가)
    ══════════════════════════════════════════════ */
 
-/* 최근 업데이트 / 인기 태그 위젯을 숨겨 TOC가 자연스럽게 최상단에 오게 함 */
+/* 최근 업데이트 / 인기 태그 위젯 숨김 */
 #panel-wrapper .access {
   display: none !important;
 }
 
-/* Chirpy 기본 CSS가 xl(1200px) 미만에서 panel-wrapper를 display:none 처리함
-   → lg(992px) 이상에서 패널이 오른쪽에 보이도록 강제 해제 */
 @media (min-width: 992px) {
+  /* ① 행(row)을 non-wrapping flex로 강제: 메인+패널이 나란히 배치됨 */
+  #main-wrapper > .container > .row {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+
+  /* ② 메인 콘텐츠: 나머지 공간을 전부 사용 (Bootstrap col-* 오버라이드) */
+  #main-wrapper > .container > .row > main {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+
+  /* ③ 패널: 260px 고정 너비로 오른쪽에 배치
+        (Chirpy가 <1200px에서 display:none 처리하므로 강제 해제) */
   #panel-wrapper {
     display: block !important;
+    flex: 0 0 260px !important;
+    width: 260px !important;
+    max-width: 260px !important;
+    min-width: 260px !important;
   }
 }
 
