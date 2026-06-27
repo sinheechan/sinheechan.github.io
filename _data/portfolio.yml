@@ -92,7 +92,7 @@ projects:
     image:
 
   - group: "Study"
-    title: "Python"
+    title:
     tag: "Python"
     desc: "데이터와 AI 알고리즘의 원리 및 연구사례 학습"
     link:
