@@ -1,7 +1,7 @@
 ---
 title: "[데이터이해] 데이터란 무엇인가 — 타입과 구조 이해하기"
 date: 2026-06-25 09:00:00 +0900
-categories: [Study, Python]
+categories: [Study]
 tags: [데이터이해]
 toc: true
 ---

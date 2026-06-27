@@ -1,7 +1,7 @@
 ---
 title: "[데이터이해] 데이터 분류와 척도 정리"
 date: 2026-06-27 00:00:00 +0900
-categories: [Study, Python]
+categories: [Study]
 tags: [데이터이해]
 toc: true
 ---
