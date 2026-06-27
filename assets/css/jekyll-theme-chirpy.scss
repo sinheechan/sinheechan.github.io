@@ -1082,9 +1082,7 @@ pre {
 
 /* ══════════════════════════════════════════════
    포스트 오른쪽 목차(TOC) 패널
-   - 최근 업데이트 / 인기 태그 숨김 → TOC만 표시
-   - lg(≥992px)에서 직접 Flexbox로 오른쪽 배치
-     (Chirpy가 Bootstrap grid를 덮어써서 col-lg-* 사용 불가)
+   - Bootstrap row/col 을 쓰지 않고 #content-row / #main-content ID로 직접 제어
    ══════════════════════════════════════════════ */
 
 /* 최근 업데이트 / 인기 태그 위젯 숨김 */
@@ -1092,42 +1090,43 @@ pre {
   display: none !important;
 }
 
+/* 콘텐츠 행: nowrap flex (Bootstrap .row 의 wrap 영향 없음) */
+#content-row {
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+/* 메인 콘텐츠: 남은 공간 전부 */
+#main-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* 패널: 기본 숨김 (Chirpy 의 display:none 과 독립적으로 제어) */
+#panel-wrapper {
+  display: none;
+  flex: 0 0 260px;
+  width: 260px;
+  max-width: 260px;
+  min-width: 260px;
+}
+
+/* 992px 이상에서만 패널 표시 */
 @media (min-width: 992px) {
-  /* ① 행(row)을 non-wrapping flex로 강제: 메인+패널이 나란히 배치됨 */
-  #main-wrapper > .container > .row {
-    flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-  }
-
-  /* ② 메인 콘텐츠: 나머지 공간을 전부 사용 (Bootstrap col-* 오버라이드) */
-  #main-wrapper > .container > .row > main {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    width: auto !important;
-  }
-
-  /* ③ 패널: 260px 고정 너비로 오른쪽에 배치
-        (Chirpy가 <1200px에서 display:none 처리하므로 강제 해제) */
   #panel-wrapper {
     display: block !important;
-    flex: 0 0 260px !important;
-    width: 260px !important;
-    max-width: 260px !important;
-    min-width: 260px !important;
   }
 }
 
-/* TOC: invisible 클래스 무력화 + sticky 고정 */
+/* TOC sticky */
 #toc-wrapper {
   visibility: visible !important;
 }
 
 @media (min-width: 992px) {
   #toc-wrapper {
-    position: sticky !important;
-    top: 4.5rem !important;
+    position: sticky;
+    top: 4.5rem;
     max-height: calc(100vh - 5.5rem);
     overflow-y: auto;
     margin-top: 0.5rem;

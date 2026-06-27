@@ -28,8 +28,8 @@ layout: compress
 
         {% include topbar.html lang=lang %}
 
-        <div class="row flex-grow-1">
-          <main aria-label="Main Content" class="col-12 px-md-4">
+        <div id="content-row" class="d-flex align-items-start flex-grow-1">
+          <main aria-label="Main Content" id="main-content" class="px-md-4">
             {% if layout.layout == 'default' %}
               {% include refactor-content.html content=content lang=lang %}
             {% else %}
