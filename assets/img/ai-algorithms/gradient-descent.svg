@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" font-family="sans-serif">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" width="480" height="280" font-family="sans-serif">
   <text x="240" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">경사하강법 (Gradient Descent)</text>
   <!-- Axes -->
   <line x1="40" y1="240" x2="440" y2="240" stroke="#999" stroke-width="1.5"/>

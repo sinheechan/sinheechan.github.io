@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="sans-serif">
   <text x="240" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">SVM - 최대 마진 결정 경계</text>
   <rect x="30" y="35" width="420" height="240" rx="6" fill="#fafafa" stroke="#eee" stroke-width="1"/>
   <circle cx="80" cy="200" r="7" fill="#4A90D9" opacity="0.8"/>

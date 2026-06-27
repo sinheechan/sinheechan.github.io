@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" font-family="sans-serif">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" width="480" height="280" font-family="sans-serif">
   <text x="240" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">DBSCAN — 밀도 기반 군집화</text>
   <rect x="20" y="35" width="440" height="220" rx="6" fill="#fafafa" stroke="#eee"/>
   <!-- Cluster A (dense blue group) -->

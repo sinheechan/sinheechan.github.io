@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" font-family="sans-serif">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" width="520" height="260" font-family="sans-serif">
   <text x="260" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">릿지(L2) vs 라쏘(L1) 계수 비교</text>
   <!-- Labels -->
   <text x="90" y="45" text-anchor="middle" font-size="12" fill="#555">규제 없음</text>

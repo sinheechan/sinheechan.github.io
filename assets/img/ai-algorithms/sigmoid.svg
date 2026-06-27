@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280" font-family="sans-serif">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280" width="500" height="280" font-family="sans-serif">
   <text x="250" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">시그모이드 함수 σ(z) = 1 / (1 + e⁻ᶻ)</text>
   <!-- Axes -->
   <line x1="50" y1="240" x2="460" y2="240" stroke="#999" stroke-width="1.5"/>

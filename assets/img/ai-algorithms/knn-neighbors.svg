@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" font-family="sans-serif">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" width="420" height="280" font-family="sans-serif">
   <text x="210" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">KNN — K=3 최근접 이웃 분류</text>
   <rect x="20" y="35" width="380" height="220" rx="6" fill="#fafafa" stroke="#eee"/>
   <!-- Class A (blue circles) -->

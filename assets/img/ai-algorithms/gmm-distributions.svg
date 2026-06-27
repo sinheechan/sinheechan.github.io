@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 260" font-family="sans-serif">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 260" width="500" height="260" font-family="sans-serif">
   <text x="250" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">GMM — 가우시안 혼합 모델</text>
   <!-- Axes -->
   <line x1="40" y1="210" x2="460" y2="210" stroke="#bbb" stroke-width="1.5"/>
