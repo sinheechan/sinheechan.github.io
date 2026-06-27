@@ -65,12 +65,17 @@ layout: default
     </table>
 
     <div class="td-empty" id="td-empty" style="display:none">검색 결과가 없습니다.</div>
+    <div class="td-pagination" id="td-pagination"></div>
   </div>
 
 </div>
 
 <script>
 (function () {
+  var PAGE_SIZE   = 20;
+  var currentPage = 1;
+  var filteredRows = [];
+
   var activeTag   = null;
   var rows        = Array.from(document.querySelectorAll('#td-tbody tr'));
   var chips       = document.querySelectorAll('.td-chip');
@@ -79,34 +84,75 @@ layout: default
   var filterLabel = document.getElementById('td-filter-label');
   var emptyEl     = document.getElementById('td-empty');
   var sortBtns    = document.querySelectorAll('.td-sort-btn');
+  var paginationEl = document.getElementById('td-pagination');
+
+  /* ── 페이지 렌더 ── */
+  function renderPage() {
+    var start = (currentPage - 1) * PAGE_SIZE;
+    var end   = start + PAGE_SIZE;
+
+    rows.forEach(function (row) { row.style.display = 'none'; });
+    filteredRows.slice(start, end).forEach(function (row) { row.style.display = ''; });
+    emptyEl.style.display = filteredRows.length === 0 ? '' : 'none';
+
+    renderPagination();
+  }
+
+  /* ── 페이지 버튼 렌더 ── */
+  function renderPagination() {
+    var totalPages = Math.ceil(filteredRows.length / PAGE_SIZE);
+    paginationEl.innerHTML = '';
+    if (totalPages <= 1) return;
+
+    function makeBtn(label, page, disabled, isActive) {
+      var btn = document.createElement('button');
+      btn.textContent = label;
+      if (isActive) btn.classList.add('active');
+      btn.disabled = disabled;
+      btn.addEventListener('click', function () {
+        currentPage = page;
+        renderPage();
+        paginationEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+      paginationEl.appendChild(btn);
+    }
+
+    makeBtn('이전', currentPage - 1, currentPage === 1, false);
+
+    for (var i = 1; i <= totalPages; i++) {
+      makeBtn(String(i), i, false, i === currentPage);
+    }
+
+    makeBtn('다음', currentPage + 1, currentPage === totalPages, false);
+  }
 
   /* ── 필터 + 검색 적용 ── */
   function applyFilters() {
     var q = searchEl.value.toLowerCase().trim();
-    var visible = 0;
-    rows.forEach(function (row) {
+    filteredRows = rows.filter(function (row) {
       var title = row.getAttribute('data-title');
       var tags  = row.getAttribute('data-tags').split('|');
       var okTag    = !activeTag || tags.some(function (t) {
         return t.toLowerCase() === activeTag.toLowerCase();
       });
       var okSearch = !q || title.includes(q);
-      if (okTag && okSearch) { row.style.display = ''; visible++; }
-      else                   { row.style.display = 'none'; }
+      return okTag && okSearch;
     });
-    emptyEl.style.display = visible === 0 ? '' : 'none';
+    currentPage = 1;
+    renderPage();
   }
 
   /* ── 정렬 ── */
   function sortRows(mode) {
-    var tbody  = document.getElementById('td-tbody');
-    var sorted = rows.slice().sort(function (a, b) {
+    var tbody = document.getElementById('td-tbody');
+    rows.sort(function (a, b) {
       if (mode === 'date') {
         return b.getAttribute('data-date').localeCompare(a.getAttribute('data-date'));
       }
       return a.getAttribute('data-title').localeCompare(b.getAttribute('data-title'), 'ko');
     });
-    sorted.forEach(function (r) { tbody.appendChild(r); });
+    rows.forEach(function (r) { tbody.appendChild(r); });
+    applyFilters();
   }
 
   /* ── 태그 칩 클릭 ── */
@@ -155,5 +201,8 @@ layout: default
     filterLabel.textContent = '';
     applyFilters();
   };
+
+  /* ── 초기 렌더 ── */
+  applyFilters();
 })();
 </script>

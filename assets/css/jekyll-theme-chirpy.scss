@@ -900,6 +900,45 @@ pre {
     padding: 2.5rem 0;
   }
 
+  .td-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 1.2rem;
+    flex-wrap: wrap;
+
+    button {
+      min-width: 2.1rem;
+      height: 2.1rem;
+      padding: 0 0.55rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background: transparent;
+      color: var(--text-color);
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.12s ease;
+
+      &:hover:not(:disabled) {
+        border-color: var(--td-accent);
+        color: var(--td-accent);
+      }
+
+      &.active {
+        background: var(--td-accent);
+        border-color: var(--td-accent);
+        color: #fff;
+        font-weight: 700;
+      }
+
+      &:disabled {
+        opacity: 0.35;
+        cursor: default;
+      }
+    }
+  }
+
   /* 모바일 */
   @media (max-width: 576px) {
     .td-stats { grid-template-columns: 1fr; gap: 0.7rem; }
