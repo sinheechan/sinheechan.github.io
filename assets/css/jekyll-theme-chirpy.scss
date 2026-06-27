@@ -1069,27 +1069,23 @@ pre {
 }
 
 /* ══════════════════════════════════════════════
-   포스트 오른쪽 목차(TOC) 패널 — xl(≥1200px) 전용
+   포스트 오른쪽 목차(TOC) 패널
+   - 최근 업데이트 / 인기 태그 숨김 → TOC만 표시
+   - xl(≥1200px) 에서 Chirpy 기본 동작 유지
    ══════════════════════════════════════════════ */
 
+/* 최근 업데이트 / 인기 태그 위젯을 숨겨 TOC가 자연스럽게 최상단에 오게 함 */
+#panel-wrapper .access {
+  display: none !important;
+}
+
+/* TOC: invisible 클래스 무력화 + sticky 고정 */
+#toc-wrapper {
+  visibility: visible !important;
+}
+
 @media (min-width: 1200px) {
-  /* 패널을 flex 컨테이너로 만들어 자식 요소 순서 변경 */
-  #panel-wrapper {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  /* 최근 업데이트 / 인기 태그를 TOC 아래로 */
-  #panel-wrapper .access {
-    order: 1;
-  }
-
-  /* TOC 를 패널 맨 위에 배치 */
-  .toc-border-cover { order: -2; }
-
   #toc-wrapper {
-    order: -1;
-    visibility: visible !important;
     position: sticky !important;
     top: 4.5rem !important;
     max-height: calc(100vh - 5.5rem);
@@ -1098,32 +1094,32 @@ pre {
     scrollbar-width: none;
   }
   #toc-wrapper::-webkit-scrollbar { display: none; }
+}
 
-  /* TOC 헤딩 */
-  #toc-wrapper .panel-heading {
-    color: var(--folio-accent);
-    font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
-  }
+/* TOC 헤딩 */
+#toc-wrapper .panel-heading {
+  color: var(--folio-accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
 
-  /* TOC 링크 */
-  #toc-wrapper nav#toc .toc-link {
-    color: var(--text-muted-color);
-    font-size: 0.81rem;
-    line-height: 1.6;
-    transition: color 0.15s ease, border-color 0.15s ease;
-    border-left: 2px solid transparent;
-    padding-left: 0.6rem;
-  }
-  #toc-wrapper nav#toc .toc-link:hover,
-  #toc-wrapper nav#toc .is-active-link {
-    color: var(--folio-accent) !important;
-    border-left-color: var(--folio-accent);
-  }
-  #toc-wrapper nav#toc .is-active-link {
-    font-weight: 600;
-  }
+/* TOC 링크 */
+#toc-wrapper nav#toc .toc-link {
+  color: var(--text-muted-color);
+  font-size: 0.81rem;
+  line-height: 1.6;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  border-left: 2px solid transparent;
+  padding-left: 0.6rem;
+}
+#toc-wrapper nav#toc .toc-link:hover,
+#toc-wrapper nav#toc .is-active-link {
+  color: var(--folio-accent) !important;
+  border-left-color: var(--folio-accent);
+}
+#toc-wrapper nav#toc .is-active-link {
+  font-weight: 600;
 }
