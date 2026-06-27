@@ -3,7 +3,7 @@ title: "[AI 알고리즘] 선형회귀와 다항회귀 정리"
 date: 2026-06-27 00:00:00 +0900
 categories: [Study, Python]
 tags: [Python, AI 알고리즘]
-toc: false
+toc: true
 ---
 
 ## 학습 순서
