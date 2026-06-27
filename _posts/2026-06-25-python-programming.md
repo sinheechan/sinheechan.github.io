@@ -3,6 +3,7 @@ title: "[프로그래밍] 데이터 분석에 자주 쓰는 Python 문법 정리
 date: 2026-06-25 10:00:00 +0900
 categories: [Study, Python]
 tags: [Python, 프로그래밍]
+toc: true
 ---
 
 ## 리스트 컴프리헨션
