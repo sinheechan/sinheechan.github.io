@@ -8,6 +8,8 @@ toc: true
 
 ## 머신러닝의 분류
 
+![머신러닝 학습 유형](/assets/img/ai-algorithms/ml-types.svg){: style="margin:0;"}
+
 ```
 지도학습 (Supervised)
   ├── 분류 (Classification): 로지스틱 회귀, 랜덤 포레스트, SVM, XGBoost

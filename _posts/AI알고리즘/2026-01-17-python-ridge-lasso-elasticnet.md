@@ -24,7 +24,7 @@ toc: true
 | **라쏘(Lasso)** | L1 : Σ\|w\| | 일부 계수를 완전히 0으로 만들어 특성 선택 효과 |
 | **엘라스틱넷** | L1 + L2 혼합 | 두 방식의 장점을 결합 |
 
-![릿지 vs 라쏘 계수 비교](/assets/img/ai-algorithms/ridge-lasso.svg)
+![릿지 vs 라쏘 계수 비교](/assets/img/ai-algorithms/ridge-lasso.svg){: style="margin:0;"}
 
 ---
 

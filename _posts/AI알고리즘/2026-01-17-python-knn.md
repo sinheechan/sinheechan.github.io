@@ -20,7 +20,7 @@ toc: true
 3. 거리가 가장 짧은 K개의 이웃 포인트를 선택함
 4. 이웃들 중 가장 많은 클래스(다수결)로 분류하거나, 값들의 평균(회귀)으로 예측함
 
-![KNN 최근접 이웃 분류](/assets/img/ai-algorithms/knn-neighbors.svg)
+![KNN 최근접 이웃 분류](/assets/img/ai-algorithms/knn-neighbors.svg){: style="margin:0;"}
 
 ---
 

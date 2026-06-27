@@ -6,6 +6,8 @@ tags: [Python, AI 알고리즘]
 toc: true
 ---
 
+![신경망 구조](/assets/img/ai-algorithms/neural-network.svg){: style="margin:0;"}
+
 ## XGBoost 코드
 
 ```python

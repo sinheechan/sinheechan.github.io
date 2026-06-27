@@ -20,7 +20,7 @@ toc: true
 - **지니 계수(Gini Impurity)** : 0에 가까울수록 순수한(단일 클래스) 노드 → sklearn 기본값
 - **정보 이득(Information Gain)** : 분할 전후의 엔트로피 차이 — 클수록 좋은 분할
 
-![결정 트리 구조](/assets/img/ai-algorithms/decision-tree.svg)
+![결정 트리 구조](/assets/img/ai-algorithms/decision-tree.svg){: style="margin:0;"}
 
 ---
 

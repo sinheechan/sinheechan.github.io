@@ -19,7 +19,7 @@ toc: true
 - 각 가우시안은 **평균(μ)**, **분산·공분산(σ²)**, **혼합 가중치(π)** 세 가지 파라미터로 정의됨
 - 모든 가우시안의 혼합 가중치 합은 1임
 
-![GMM 가우시안 혼합 모델](/assets/img/ai-algorithms/gmm-distributions.svg)
+![GMM 가우시안 혼합 모델](/assets/img/ai-algorithms/gmm-distributions.svg){: style="margin:0;"}
 
 ---
 

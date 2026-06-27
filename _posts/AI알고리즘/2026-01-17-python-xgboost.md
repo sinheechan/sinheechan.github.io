@@ -11,6 +11,8 @@ toc: true
 - XGBoost(eXtreme Gradient Boosting)는 그래디언트 부스팅에 **정규화와 병렬 처리**를 추가한 고성능 앙상블 알고리즘임
 - Kaggle 등 데이터 사이언스 대회에서 압도적인 성능으로 널리 채택됨
 
+![XGBoost 순차적 트리 학습](/assets/img/ai-algorithms/xgboost-boosting.svg){: style="margin:0;"}
+
 ---
 
 ## 기본 이론

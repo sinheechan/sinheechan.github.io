@@ -11,7 +11,7 @@ toc: true
 - 앙상블(Ensemble)이란 여러 모델의 예측 결과를 조합해 단일 모델보다 높은 성능을 내는 방식임
 - 배깅·부스팅·보팅은 대표적인 세 가지 앙상블 전략임
 
-![배깅 vs 부스팅](/assets/img/ai-algorithms/bagging-boosting.svg)
+![배깅 vs 부스팅](/assets/img/ai-algorithms/bagging-boosting.svg){: style="margin:0;"}
 
 ---
 

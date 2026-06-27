@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" width="520" height="260" font-family="sans-serif">
+  <text x="260" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">LightGBM — 리프 중심 vs 레벨 중심 트리 성장</text>
+  <line x1="260" y1="35" x2="260" y2="248" stroke="#eee" stroke-width="2"/>
+  <text x="130" y="48" text-anchor="middle" font-size="12" font-weight="bold" fill="#4A90D9">XGBoost</text>
+  <text x="130" y="62" text-anchor="middle" font-size="10" fill="#4A90D9">레벨 중심 (Level-wise)</text>
+  <circle cx="130" cy="85" r="14" fill="#EBF4FF" stroke="#4A90D9" stroke-width="2"/>
+  <text x="130" y="89" text-anchor="middle" font-size="9" fill="#4A90D9">root</text>
+  <line x1="118" y1="99" x2="80" y2="120" stroke="#4A90D9" stroke-width="1.5"/>
+  <line x1="142" y1="99" x2="180" y2="120" stroke="#4A90D9" stroke-width="1.5"/>
+  <circle cx="80" cy="130" r="12" fill="#EBF4FF" stroke="#4A90D9" stroke-width="1.5"/>
+  <circle cx="180" cy="130" r="12" fill="#EBF4FF" stroke="#4A90D9" stroke-width="1.5"/>
+  <line x1="70" y1="142" x2="50" y2="162" stroke="#4A90D9" stroke-width="1.5"/>
+  <line x1="90" y1="142" x2="110" y2="162" stroke="#4A90D9" stroke-width="1.5"/>
+  <line x1="170" y1="142" x2="150" y2="162" stroke="#4A90D9" stroke-width="1.5"/>
+  <line x1="190" y1="142" x2="210" y2="162" stroke="#4A90D9" stroke-width="1.5"/>
+  <circle cx="50" cy="170" r="10" fill="#EBF4FF" stroke="#4A90D9" stroke-width="1.5"/>
+  <circle cx="110" cy="170" r="10" fill="#EBF4FF" stroke="#4A90D9" stroke-width="1.5"/>
+  <circle cx="150" cy="170" r="10" fill="#EBF4FF" stroke="#4A90D9" stroke-width="1.5"/>
+  <circle cx="210" cy="170" r="10" fill="#EBF4FF" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="18" y="89" font-size="9" fill="#aaa">Lv0</text>
+  <text x="18" y="133" font-size="9" fill="#aaa">Lv1</text>
+  <text x="18" y="173" font-size="9" fill="#aaa">Lv2</text>
+  <text x="130" y="200" text-anchor="middle" font-size="10" fill="#555">같은 깊이의 모든 노드 분할</text>
+  <text x="130" y="215" text-anchor="middle" font-size="10" fill="#aaa">(안정적, 상대적으로 느림)</text>
+  <text x="390" y="48" text-anchor="middle" font-size="12" font-weight="bold" fill="#E74C3C">LightGBM</text>
+  <text x="390" y="62" text-anchor="middle" font-size="10" fill="#E74C3C">리프 중심 (Leaf-wise)</text>
+  <circle cx="390" cy="85" r="14" fill="#FDEDEC" stroke="#E74C3C" stroke-width="2"/>
+  <text x="390" y="89" text-anchor="middle" font-size="9" fill="#E74C3C">root</text>
+  <line x1="378" y1="99" x2="340" y2="120" stroke="#E74C3C" stroke-width="1.5"/>
+  <line x1="402" y1="99" x2="440" y2="120" stroke="#E74C3C" stroke-width="2"/>
+  <circle cx="340" cy="130" r="12" fill="#FDEDEC" stroke="#E74C3C" stroke-width="1" opacity="0.4"/>
+  <circle cx="440" cy="130" r="12" fill="#FDEDEC" stroke="#E74C3C" stroke-width="2"/>
+  <text x="455" y="134" font-size="11" fill="#E74C3C" font-weight="bold">&#x2191;</text>
+  <line x1="430" y1="142" x2="405" y2="162" stroke="#E74C3C" stroke-width="1.5" opacity="0.4"/>
+  <line x1="450" y1="142" x2="475" y2="162" stroke="#E74C3C" stroke-width="2"/>
+  <circle cx="405" cy="170" r="10" fill="#FDEDEC" stroke="#E74C3C" stroke-width="1" opacity="0.4"/>
+  <circle cx="475" cy="170" r="10" fill="#FDEDEC" stroke="#E74C3C" stroke-width="2"/>
+  <text x="490" y="174" font-size="11" fill="#E74C3C" font-weight="bold">&#x2191;</text>
+  <text x="390" y="200" text-anchor="middle" font-size="10" fill="#555">손실 최대 감소 리프만 우선 분할</text>
+  <text x="390" y="215" text-anchor="middle" font-size="10" fill="#aaa">(빠름, 소규모 데이터 과적합 주의)</text>
+  <rect x="20" y="232" width="480" height="22" rx="4" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="260" y="247" text-anchor="middle" font-size="10" fill="#888">GOSS: 기울기 큰 샘플 우선&#160;|&#160;EFB: 희소 특성 묶기 &#x2192; 대용량 고속 처리</text>
+</svg>

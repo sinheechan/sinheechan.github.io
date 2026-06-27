@@ -19,7 +19,7 @@ toc: true
 - PC2는 PC1과 수직(직교)인 방향 중 분산이 가장 큰 방향임
 - 주성분들은 서로 상관관계가 없는(직교) 새로운 축을 형성함
 
-![PCA 주성분 분석](/assets/img/ai-algorithms/pca-components.svg)
+![PCA 주성분 분석](/assets/img/ai-algorithms/pca-components.svg){: style="margin:0;"}
 
 ---
 
