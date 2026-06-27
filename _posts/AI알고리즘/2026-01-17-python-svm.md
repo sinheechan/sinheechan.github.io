@@ -1,4 +1,4 @@
----
+﻿---
 title: "[AI 알고리즘] SVM 정리"
 date: 2026-01-17 00:00:00 +0900
 categories: [Study, Python]
@@ -19,7 +19,7 @@ toc: true
 - **서포트 벡터(Support Vector)** : 결정 경계에서 가장 가까운 데이터 포인트들 — 마진 크기를 결정함
 - **마진(Margin)** : 결정 경계에서 서포트 벡터까지의 거리 × 2
 
-![SVM 최대 마진 결정 경계](/assets/img/ai-algorithms/svm-margin.svg){: style="margin:0;"}
+![SVM 최대 마진 결정 경계](/assets/img/ai-algorithms/svm-margin.svg){: .normal}
 
 ---
 

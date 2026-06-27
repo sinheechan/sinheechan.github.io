@@ -1,4 +1,4 @@
----
+﻿---
 title: "[AI 알고리즘] 나이브 베이즈 정리"
 date: 2026-01-17 00:00:00 +0900
 categories: [Study, Python]
@@ -11,7 +11,7 @@ toc: true
 - 나이브 베이즈는 **베이즈 정리**를 기반으로, 각 특성이 서로 독립이라고 가정하고 확률을 계산하는 분류 알고리즘임
 - "나이브(Naive)"라는 이름은 이 **독립 가정**에서 유래함
 
-![나이브 베이즈 베이즈 정리](/assets/img/ai-algorithms/naive-bayes.svg){: style="margin:0;"}
+![나이브 베이즈 베이즈 정리](/assets/img/ai-algorithms/naive-bayes.svg){: .normal}
 
 ---
 

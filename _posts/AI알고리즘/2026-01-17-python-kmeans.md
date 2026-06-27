@@ -1,4 +1,4 @@
----
+﻿---
 title: "[AI 알고리즘] K-Means 군집화 정리"
 date: 2026-01-17 00:00:00 +0900
 categories: [Study, Python]
@@ -20,7 +20,7 @@ toc: true
 3. 각 군집의 평균을 새로운 중심점으로 갱신함
 4. 중심점이 더 이상 변하지 않을 때까지 2~3 과정을 반복함
 
-![K-Means 군집화 과정](/assets/img/ai-algorithms/kmeans-clusters.svg){: style="margin:0;"}
+![K-Means 군집화 과정](/assets/img/ai-algorithms/kmeans-clusters.svg){: .normal}
 
 ---
 

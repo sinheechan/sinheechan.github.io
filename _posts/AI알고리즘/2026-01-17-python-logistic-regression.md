@@ -1,4 +1,4 @@
----
+﻿---
 title: "[AI 알고리즘] 로지스틱 회귀 정리"
 date: 2026-01-17 00:00:00 +0900
 categories: [Study, Python]
@@ -19,7 +19,7 @@ toc: true
 - **시그모이드 함수** : σ(z) = 1 / (1 + e⁻ᶻ) — 어떤 값이든 0~1 사이로 압축함
 - 출력 확률이 0.5 이상이면 클래스 1, 미만이면 클래스 0으로 분류함
 
-![시그모이드 함수](/assets/img/ai-algorithms/sigmoid.svg){: style="margin:0;"}
+![시그모이드 함수](/assets/img/ai-algorithms/sigmoid.svg){: .normal}
 
 ---
 

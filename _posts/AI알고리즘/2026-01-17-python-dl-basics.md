@@ -1,4 +1,4 @@
----
+﻿---
 title: "[AI 알고리즘] 딥러닝 기초 정리"
 date: 2026-01-17 00:00:00 +0900
 categories: [Study, Python]
@@ -18,7 +18,7 @@ toc: true
 - **뉴런(Neuron)** : 입력값에 가중치를 곱하고 편향을 더한 뒤 활성화 함수를 통과시킴
 - 여러 뉴런이 층을 이루고, 층들이 쌓여 **신경망(Neural Network)** 을 형성함
 
-![신경망 구조](/assets/img/ai-algorithms/neural-network.svg){: style="margin:0;"}
+![신경망 구조](/assets/img/ai-algorithms/neural-network.svg){: .normal}
 
 ---
 
@@ -37,7 +37,7 @@ toc: true
 - 손실 함수의 기울기(gradient) 반대 방향으로 가중치를 조금씩 이동함
 - `w := w - α · ∂L/∂w` (α = 학습률)
 
-![경사하강법](/assets/img/ai-algorithms/gradient-descent.svg){: style="margin:0;"}
+![경사하강법](/assets/img/ai-algorithms/gradient-descent.svg){: .normal}
 
 ---
 

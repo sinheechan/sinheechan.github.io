@@ -1,4 +1,4 @@
----
+﻿---
 title: "[AI 알고리즘] 머신러닝 기초 정리"
 date: 2026-01-17 00:00:00 +0900
 categories: [Study, Python]
@@ -23,7 +23,7 @@ toc: true
 | **비지도학습** | 정답 없이 데이터 구조 파악 | K-Means, PCA, DBSCAN |
 | **강화학습** | 환경과 상호작용하며 보상 최대화 | Q-Learning, PPO |
 
-![머신러닝 학습 유형](/assets/img/ai-algorithms/ml-types.svg){: style="margin:0;"}
+![머신러닝 학습 유형](/assets/img/ai-algorithms/ml-types.svg){: .normal}
 
 ---
 

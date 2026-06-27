@@ -1,4 +1,4 @@
----
+﻿---
 title: "[AI 알고리즘] DBSCAN 정리"
 date: 2026-01-17 00:00:00 +0900
 categories: [Study, Python]
@@ -21,7 +21,7 @@ toc: true
 4. 추가된 포인트도 핵심 포인트이면 연쇄적으로 군집을 확장함
 5. 어느 군집에도 포함되지 않는 포인트는 **노이즈(Noise)** 로 처리함
 
-![DBSCAN 밀도 기반 군집화](/assets/img/ai-algorithms/dbscan-clusters.svg){: style="margin:0;"}
+![DBSCAN 밀도 기반 군집화](/assets/img/ai-algorithms/dbscan-clusters.svg){: .normal}
 
 ---
 

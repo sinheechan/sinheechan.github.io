@@ -1,4 +1,4 @@
----
+﻿---
 title: "[AI 알고리즘] 머신러닝 핵심 알고리즘 개념 정리"
 date: 2026-06-25 12:00:00 +0900
 categories: [Study, Python]
@@ -8,7 +8,7 @@ toc: true
 
 ## 머신러닝의 분류
 
-![머신러닝 학습 유형](/assets/img/ai-algorithms/ml-types.svg){: style="margin:0;"}
+![머신러닝 학습 유형](/assets/img/ai-algorithms/ml-types.svg){: .normal}
 
 ```
 지도학습 (Supervised)

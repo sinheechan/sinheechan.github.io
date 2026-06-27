@@ -1,4 +1,4 @@
----
+﻿---
 title: "[AI 알고리즘] XGBoost · 딥러닝 · CNN 코드 정리"
 date: 2026-01-17 00:00:00 +0900
 categories: [Study, Python]
@@ -6,7 +6,7 @@ tags: [Python, AI 알고리즘]
 toc: true
 ---
 
-![신경망 구조](/assets/img/ai-algorithms/neural-network.svg){: style="margin:0;"}
+![신경망 구조](/assets/img/ai-algorithms/neural-network.svg){: .normal}
 
 ## XGBoost 코드
 

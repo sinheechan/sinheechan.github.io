@@ -1,4 +1,4 @@
----
+﻿---
 title: "[AI 알고리즘] 선형회귀와 다항회귀 정리"
 date: 2026-06-27 00:00:00 +0900
 categories: [Study, Python]
@@ -29,7 +29,7 @@ toc: true
 - 인공지능에서는 기울기 a를 w(weight)라는 변수로 표현하며, 가중치 또는 계수라고 부름
 - b(bias)는 수학에서와 동일하게 절편이라고 부름
 
-![선형회귀 기본 개념](/assets/img/ai-algorithms/linear-regression.svg){: style="margin:0;"}
+![선형회귀 기본 개념](/assets/img/ai-algorithms/linear-regression.svg){: .normal}
 
 ### 2) 가중치와 계수 구하기
 
@@ -52,7 +52,7 @@ toc: true
 - 차수(degree)란 방정식의 항의 수를 의미하며, 차수가 높을수록 곡선이 데이터에 더 잘 맞춰짐
 - 차수를 높이면 모델의 오차가 줄어드는 장점이 있음
 
-![다항회귀 차수와 과대적합](/assets/img/ai-algorithms/polynomial-regression.svg){: style="margin:0;"}
+![다항회귀 차수와 과대적합](/assets/img/ai-algorithms/polynomial-regression.svg){: .normal}
 
 ### 2) 다항회귀 표현하기
 
