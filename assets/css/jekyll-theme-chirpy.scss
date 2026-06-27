@@ -1090,9 +1090,11 @@ pre {
   display: none !important;
 }
 
-/* 콘텐츠 행: nowrap flex (Bootstrap .row 의 wrap 영향 없음) */
+/* 콘텐츠 행: .d-flex 클래스가 컴파일 CSS에 없으므로 직접 선언 */
 #content-row {
+  display: flex !important;
   flex-wrap: nowrap;
+  align-items: flex-start;
   min-width: 0;
 }
 
