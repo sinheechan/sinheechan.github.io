@@ -20,13 +20,13 @@ script_includes:
     {% endif %}
 
     <div class="post-meta text-muted">
-      <!-- published date (tooltip 제거) -->
+      <!-- published date -->
       <span>
         {{ site.data.locales[lang].post.posted }}
         {% include datetime.html date=page.date tooltip=false lang=lang %}
       </span>
 
-      <!-- lastmod date (tooltip 제거) -->
+      <!-- lastmod date -->
       {% if page.last_modified_at and page.last_modified_at != page.date %}
         <span>
           {{ site.data.locales[lang].post.updated }}
@@ -52,7 +52,7 @@ script_includes:
       {% endif %}
 
       <div class="d-flex justify-content-between">
-        <!-- author(s): 링크 제거, 이름만 표시 -->
+        <!-- author(s) -->
         <span>
           {% if page.author %}
             {% assign authors = page.author %}
@@ -65,11 +65,7 @@ script_includes:
           <em>
             {% if authors %}
               {% for author in authors %}
-                {% if site.data.authors[author].url -%}
-                  {{ site.data.authors[author].name }}
-                {%- else -%}
-                  {{ site.data.authors[author].name }}
-                {%- endif %}
+                {{- site.data.authors[author].name -}}
                 {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
               {% endfor %}
             {% else %}
