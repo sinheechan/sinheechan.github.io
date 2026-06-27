@@ -33,5 +33,5 @@
   <text x="130" y="60" font-size="12" fill="#F5A623" font-weight="bold">PC2</text>
   <text x="58" y="90" font-size="10" fill="#F5A623">분산 2번째</text>
   <!-- Explanation -->
-  <text x="240" y="272" text-anchor="middle" font-size="10" fill="#888">PC1이 데이터 분산을 가장 많이 설명 &nbsp;|&nbsp; 차원 축소 시 PC1만 선택</text>
+  <text x="240" y="272" text-anchor="middle" font-size="10" fill="#888">PC1이 데이터 분산을 가장 많이 설명&#160;|&#160;차원 축소 시 PC1만 선택</text>
 </svg>

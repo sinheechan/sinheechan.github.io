@@ -32,5 +32,5 @@
   <polygon points="388,152 393,166 408,166 397,175 401,189 388,180 375,189 379,175 368,166 383,166" fill="#E74C3C" stroke="white" stroke-width="1.5"/>
   <text x="388" y="147" text-anchor="middle" font-size="10" fill="#E74C3C">중심점</text>
   <!-- Legend -->
-  <text x="240" y="268" text-anchor="middle" font-size="10" fill="#888">★ = 군집 중심점(Centroid) &nbsp;|&nbsp; 각 점은 가장 가까운 중심점에 할당됨</text>
+  <text x="240" y="268" text-anchor="middle" font-size="10" fill="#888">★ = 군집 중심점(Centroid)&#160;|&#160;각 점은 가장 가까운 중심점에 할당됨</text>
 </svg>

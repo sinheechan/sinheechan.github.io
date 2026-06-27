@@ -45,5 +45,5 @@
   <text x="80" y="268" text-anchor="middle" font-size="10" fill="#888">3개 특성</text>
   <text x="250" y="268" text-anchor="middle" font-size="10" fill="#888">4개 뉴런</text>
   <text x="420" y="268" text-anchor="middle" font-size="10" fill="#888">2개 출력</text>
-  <text x="250" y="285" text-anchor="middle" font-size="10" fill="#888">각 연결선은 가중치(w)를 가짐 &nbsp;|&nbsp; 순전파(Forward) → 역전파(Backward)</text>
+  <text x="250" y="285" text-anchor="middle" font-size="10" fill="#888">각 연결선은 가중치(w)를 가짐&#160;|&#160;순전파(Forward) → 역전파(Backward)</text>
 </svg>

@@ -33,5 +33,5 @@
   <!-- Learning rate annotation -->
   <text x="88" y="155" font-size="10" fill="#555">← 학습률(α)만큼 이동</text>
   <!-- Formula -->
-  <text x="240" y="275" text-anchor="middle" font-size="11" fill="#555">w := w - α · ∂L/∂w &nbsp;(기울기 반대 방향으로 이동)</text>
+  <text x="240" y="275" text-anchor="middle" font-size="11" fill="#555">w := w - α · ∂L/∂w&#160;(기울기 반대 방향으로 이동)</text>
 </svg>
