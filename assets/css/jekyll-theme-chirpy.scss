@@ -1090,27 +1090,30 @@ pre {
   display: none !important;
 }
 
-/* 콘텐츠 행: .d-flex 클래스가 컴파일 CSS에 없으므로 직접 선언 */
+/* 콘텐츠 행: .d-flex 클래스가 컴파일 CSS에 없으므로 직접 선언
+   align-items 기본값(stretch) 유지 → panel이 main 높이만큼 늘어나야 sticky 작동 */
 #content-row {
   display: flex !important;
   flex-wrap: nowrap;
-  align-items: flex-start;
   min-width: 0;
 }
 
-/* 메인 콘텐츠: 남은 공간 전부 */
+/* 메인 콘텐츠: 남은 공간 전부, 자체 높이 기준 정렬 */
 #main-content {
   flex: 1 1 auto;
   min-width: 0;
+  align-self: flex-start;
 }
 
-/* 패널: 기본 숨김 (Chirpy 의 display:none 과 독립적으로 제어) */
+/* 패널: 기본 숨김 */
 #panel-wrapper {
   display: none;
-  flex: 0 0 260px;
-  width: 260px;
-  max-width: 260px;
-  min-width: 260px;
+  flex: 0 0 220px;
+  width: 220px;
+  max-width: 220px;
+  min-width: 220px;
+  padding-left: 0.5rem;
+  padding-right: 0;
 }
 
 /* 992px 이상에서만 패널 표시 */
@@ -1120,15 +1123,17 @@ pre {
   }
 }
 
-/* TOC sticky */
+/* TOC: invisible 클래스 무력화 */
 #toc-wrapper {
   visibility: visible !important;
+  padding: 0 !important;
 }
 
+/* TOC sticky: panel이 stretch로 늘어나 있어야 스크롤 따라옴 */
 @media (min-width: 992px) {
   #toc-wrapper {
-    position: sticky;
-    top: 4.5rem;
+    position: sticky !important;
+    top: 4.5rem !important;
     max-height: calc(100vh - 5.5rem);
     overflow-y: auto;
     margin-top: 0.5rem;
