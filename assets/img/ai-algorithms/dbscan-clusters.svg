@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" font-family="sans-serif">
+  <text x="240" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">DBSCAN — 밀도 기반 군집화</text>
+  <rect x="20" y="35" width="440" height="220" rx="6" fill="#fafafa" stroke="#eee"/>
+  <!-- Cluster A (dense blue group) -->
+  <circle cx="110" cy="120" r="6" fill="#4A90D9" opacity="0.85"/>
+  <circle cx="130" cy="140" r="6" fill="#4A90D9" opacity="0.85"/>
+  <circle cx="115" cy="155" r="6" fill="#4A90D9" opacity="0.85"/>
+  <circle cx="100" cy="145" r="6" fill="#4A90D9" opacity="0.85"/>
+  <circle cx="140" cy="120" r="6" fill="#4A90D9" opacity="0.85"/>
+  <circle cx="155" cy="140" r="6" fill="#4A90D9" opacity="0.85"/>
+  <circle cx="125" cy="165" r="6" fill="#4A90D9" opacity="0.85"/>
+  <circle cx="90" cy="130" r="6" fill="#4A90D9" opacity="0.85"/>
+  <!-- Border point A -->
+  <circle cx="170" cy="155" r="6" fill="#4A90D9" opacity="0.5" stroke="#4A90D9" stroke-width="1.5"/>
+  <!-- Cluster A epsilon circle (example) -->
+  <circle cx="130" cy="140" r="38" fill="none" stroke="#4A90D9" stroke-width="1" stroke-dasharray="5,4" opacity="0.5"/>
+  <text x="130" y="107" text-anchor="middle" font-size="9" fill="#4A90D9">ε</text>
+  <!-- Cluster B (dense orange group) -->
+  <circle cx="330" cy="100" r="6" fill="#F5A623" opacity="0.85"/>
+  <circle cx="355" cy="115" r="6" fill="#F5A623" opacity="0.85"/>
+  <circle cx="340" cy="135" r="6" fill="#F5A623" opacity="0.85"/>
+  <circle cx="315" cy="120" r="6" fill="#F5A623" opacity="0.85"/>
+  <circle cx="360" cy="95" r="6" fill="#F5A623" opacity="0.85"/>
+  <circle cx="375" cy="120" r="6" fill="#F5A623" opacity="0.85"/>
+  <circle cx="345" cy="150" r="6" fill="#F5A623" opacity="0.85"/>
+  <circle cx="305" cy="105" r="6" fill="#F5A623" opacity="0.85"/>
+  <!-- Noise points -->
+  <circle cx="220" cy="80" r="6" fill="#E74C3C" opacity="0.7"/>
+  <circle cx="250" cy="200" r="6" fill="#E74C3C" opacity="0.7"/>
+  <circle cx="55" cy="220" r="6" fill="#E74C3C" opacity="0.7"/>
+  <circle cx="430" cy="190" r="6" fill="#E74C3C" opacity="0.7"/>
+  <circle cx="190" cy="230" r="6" fill="#E74C3C" opacity="0.7"/>
+  <!-- Legend -->
+  <circle cx="55" cy="265" r="6" fill="#4A90D9"/>
+  <text x="65" y="269" font-size="11" fill="#555">군집 A (핵심·경계점)</text>
+  <circle cx="220" cy="265" r="6" fill="#F5A623"/>
+  <text x="230" y="269" font-size="11" fill="#555">군집 B</text>
+  <circle cx="320" cy="265" r="6" fill="#E74C3C"/>
+  <text x="330" y="269" font-size="11" fill="#555">노이즈(이상치)</text>
+</svg>

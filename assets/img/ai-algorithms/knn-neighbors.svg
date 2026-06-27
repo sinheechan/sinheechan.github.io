@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" font-family="sans-serif">
+  <text x="210" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">KNN — K=3 최근접 이웃 분류</text>
+  <rect x="20" y="35" width="380" height="220" rx="6" fill="#fafafa" stroke="#eee"/>
+  <!-- Class A (blue circles) -->
+  <circle cx="100" cy="110" r="7" fill="#4A90D9" opacity="0.8"/>
+  <circle cx="130" cy="140" r="7" fill="#4A90D9" opacity="0.8"/>
+  <circle cx="80" cy="160" r="7" fill="#4A90D9" opacity="0.8"/>
+  <circle cx="75" cy="90" r="7" fill="#4A90D9" opacity="0.8"/>
+  <circle cx="155" cy="100" r="7" fill="#4A90D9" opacity="0.8"/>
+  <!-- Class B (red triangles) -->
+  <polygon points="290,90 298,108 282,108" fill="#E74C3C" opacity="0.8"/>
+  <polygon points="330,120 338,138 322,138" fill="#E74C3C" opacity="0.8"/>
+  <polygon points="310,150 318,168 302,168" fill="#E74C3C" opacity="0.8"/>
+  <polygon points="355,80 363,98 347,98" fill="#E74C3C" opacity="0.8"/>
+  <polygon points="270,140 278,158 262,158" fill="#E74C3C" opacity="0.8"/>
+  <!-- Test point -->
+  <circle cx="210" cy="140" r="9" fill="#F5A623" stroke="white" stroke-width="2"/>
+  <text x="210" y="175" text-anchor="middle" font-size="11" fill="#E65100">새 데이터</text>
+  <!-- K=3 radius circle -->
+  <circle cx="210" cy="140" r="85" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- Lines to 3 nearest neighbors -->
+  <line x1="210" y1="140" x2="130" y2="140" stroke="#4A90D9" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="210" y1="140" x2="155" y2="100" stroke="#4A90D9" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="210" y1="140" x2="270" y2="140" stroke="#E74C3C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Legend -->
+  <text x="75" y="260" text-anchor="middle" font-size="11" fill="#4A90D9">● 클래스 A (2개)</text>
+  <text x="210" y="260" text-anchor="middle" font-size="11" fill="#E74C3C">▲ 클래스 B (1개)</text>
+  <text x="338" y="260" text-anchor="middle" font-size="11" fill="#E65100">→ 클래스 A로 분류</text>
+</svg>

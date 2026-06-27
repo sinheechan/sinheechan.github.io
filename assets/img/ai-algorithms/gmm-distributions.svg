@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 260" font-family="sans-serif">
+  <text x="250" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">GMM — 가우시안 혼합 모델</text>
+  <!-- Axes -->
+  <line x1="40" y1="210" x2="460" y2="210" stroke="#bbb" stroke-width="1.5"/>
+  <text x="464" y="214" font-size="11" fill="#999">x</text>
+  <!-- Gaussian 1 (blue) -->
+  <path d="M 40,210 C 60,208 80,200 100,185 C 120,168 140,135 160,110 C 175,92 185,80 200,78 C 215,76 225,85 240,100 C 255,118 265,143 280,165 C 295,183 310,200 340,208 C 370,210 400,210 460,210"
+        fill="#4A90D9" fill-opacity="0.15" stroke="#4A90D9" stroke-width="2"/>
+  <!-- Gaussian 2 (red) -->
+  <path d="M 40,210 C 70,210 100,209 130,205 C 155,202 170,190 190,175 C 210,158 225,140 250,120 C 265,108 280,98 300,95 C 318,93 330,100 345,115 C 362,132 375,158 390,180 C 405,198 425,208 460,210"
+        fill="#E74C3C" fill-opacity="0.15" stroke="#E74C3C" stroke-width="2"/>
+  <!-- Peak markers -->
+  <line x1="200" y1="78" x2="200" y2="210" stroke="#4A90D9" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="200" y="225" text-anchor="middle" font-size="11" fill="#4A90D9">μ₁</text>
+  <line x1="300" y1="95" x2="300" y2="210" stroke="#E74C3C" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="300" y="225" text-anchor="middle" font-size="11" fill="#E74C3C">μ₂</text>
+  <!-- Overlap region annotation -->
+  <text x="250" y="145" text-anchor="middle" font-size="10" fill="#888">겹치는 영역</text>
+  <text x="250" y="158" text-anchor="middle" font-size="9" fill="#aaa">(소프트 할당)</text>
+  <!-- Legend -->
+  <rect x="60" y="50" width="14" height="4" fill="#4A90D9" opacity="0.7"/>
+  <text x="80" y="57" font-size="11" fill="#4A90D9">가우시안 1 (π₁, μ₁, σ₁)</text>
+  <rect x="60" y="70" width="14" height="4" fill="#E74C3C" opacity="0.7"/>
+  <text x="80" y="77" font-size="11" fill="#E74C3C">가우시안 2 (π₂, μ₂, σ₂)</text>
+  <text x="250" y="248" text-anchor="middle" font-size="10" fill="#888">EM 알고리즘으로 각 가우시안의 평균(μ), 분산(σ²), 혼합 가중치(π)를 추정</text>
+</svg>

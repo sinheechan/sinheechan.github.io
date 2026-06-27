@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" font-family="sans-serif">
+  <text x="250" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">신경망 구조 (Neural Network)</text>
+  <!-- Layer labels -->
+  <text x="80" y="45" text-anchor="middle" font-size="12" fill="#4A90D9" font-weight="bold">입력층</text>
+  <text x="250" y="45" text-anchor="middle" font-size="12" fill="#27AE60" font-weight="bold">은닉층</text>
+  <text x="420" y="45" text-anchor="middle" font-size="12" fill="#E74C3C" font-weight="bold">출력층</text>
+  <!-- Connections input->hidden -->
+  <g stroke="#ddd" stroke-width="0.8" opacity="0.6">
+    <line x1="80" y1="90" x2="250" y2="90"/><line x1="80" y1="90" x2="250" y2="135"/>
+    <line x1="80" y1="90" x2="250" y2="180"/><line x1="80" y1="90" x2="250" y2="225"/>
+    <line x1="80" y1="155" x2="250" y2="90"/><line x1="80" y1="155" x2="250" y2="135"/>
+    <line x1="80" y1="155" x2="250" y2="180"/><line x1="80" y1="155" x2="250" y2="225"/>
+    <line x1="80" y1="220" x2="250" y2="90"/><line x1="80" y1="220" x2="250" y2="135"/>
+    <line x1="80" y1="220" x2="250" y2="180"/><line x1="80" y1="220" x2="250" y2="225"/>
+  </g>
+  <!-- Connections hidden->output -->
+  <g stroke="#ddd" stroke-width="0.8" opacity="0.6">
+    <line x1="250" y1="90" x2="420" y2="135"/><line x1="250" y1="90" x2="420" y2="195"/>
+    <line x1="250" y1="135" x2="420" y2="135"/><line x1="250" y1="135" x2="420" y2="195"/>
+    <line x1="250" y1="180" x2="420" y2="135"/><line x1="250" y1="180" x2="420" y2="195"/>
+    <line x1="250" y1="225" x2="420" y2="135"/><line x1="250" y1="225" x2="420" y2="195"/>
+  </g>
+  <!-- Input nodes -->
+  <circle cx="80" cy="90" r="18" fill="#EBF4FF" stroke="#4A90D9" stroke-width="2"/>
+  <text x="80" y="94" text-anchor="middle" font-size="11" fill="#4A90D9">x₁</text>
+  <circle cx="80" cy="155" r="18" fill="#EBF4FF" stroke="#4A90D9" stroke-width="2"/>
+  <text x="80" y="159" text-anchor="middle" font-size="11" fill="#4A90D9">x₂</text>
+  <circle cx="80" cy="220" r="18" fill="#EBF4FF" stroke="#4A90D9" stroke-width="2"/>
+  <text x="80" y="224" text-anchor="middle" font-size="11" fill="#4A90D9">x₃</text>
+  <!-- Hidden nodes -->
+  <circle cx="250" cy="90" r="18" fill="#EDFFF4" stroke="#27AE60" stroke-width="2"/>
+  <text x="250" y="94" text-anchor="middle" font-size="11" fill="#27AE60">h₁</text>
+  <circle cx="250" cy="135" r="18" fill="#EDFFF4" stroke="#27AE60" stroke-width="2"/>
+  <text x="250" y="139" text-anchor="middle" font-size="11" fill="#27AE60">h₂</text>
+  <circle cx="250" cy="180" r="18" fill="#EDFFF4" stroke="#27AE60" stroke-width="2"/>
+  <text x="250" y="184" text-anchor="middle" font-size="11" fill="#27AE60">h₃</text>
+  <circle cx="250" cy="225" r="18" fill="#EDFFF4" stroke="#27AE60" stroke-width="2"/>
+  <text x="250" y="229" text-anchor="middle" font-size="11" fill="#27AE60">h₄</text>
+  <!-- Output nodes -->
+  <circle cx="420" cy="135" r="18" fill="#FDEDEC" stroke="#E74C3C" stroke-width="2"/>
+  <text x="420" y="139" text-anchor="middle" font-size="11" fill="#E74C3C">ŷ₁</text>
+  <circle cx="420" cy="195" r="18" fill="#FDEDEC" stroke="#E74C3C" stroke-width="2"/>
+  <text x="420" y="199" text-anchor="middle" font-size="11" fill="#E74C3C">ŷ₂</text>
+  <!-- Annotations -->
+  <text x="80" y="268" text-anchor="middle" font-size="10" fill="#888">3개 특성</text>
+  <text x="250" y="268" text-anchor="middle" font-size="10" fill="#888">4개 뉴런</text>
+  <text x="420" y="268" text-anchor="middle" font-size="10" fill="#888">2개 출력</text>
+  <text x="250" y="285" text-anchor="middle" font-size="10" fill="#888">각 연결선은 가중치(w)를 가짐 &nbsp;|&nbsp; 순전파(Forward) → 역전파(Backward)</text>
+</svg>

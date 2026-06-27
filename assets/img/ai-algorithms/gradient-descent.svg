@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" font-family="sans-serif">
+  <text x="240" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">경사하강법 (Gradient Descent)</text>
+  <!-- Axes -->
+  <line x1="40" y1="240" x2="440" y2="240" stroke="#999" stroke-width="1.5"/>
+  <line x1="40" y1="240" x2="40" y2="40" stroke="#999" stroke-width="1.5"/>
+  <polygon points="440,236 434,243 434,237" fill="#999"/>
+  <polygon points="36,40 40,34 44,40" fill="#999"/>
+  <text x="445" y="244" font-size="12" fill="#666">w</text>
+  <text x="44" y="36" font-size="12" fill="#666">손실(Loss)</text>
+  <!-- Loss curve (parabola approximation) -->
+  <path d="M 60,80 Q 240,240 420,80" fill="none" stroke="#4A90D9" stroke-width="2.5"/>
+  <!-- Minimum point -->
+  <circle cx="240" cy="240" r="5" fill="#27AE60"/>
+  <text x="240" y="258" text-anchor="middle" font-size="11" fill="#27AE60">최솟값 (최적 w)</text>
+  <!-- Step 1 -->
+  <circle cx="80" cy="115" r="6" fill="#E74C3C"/>
+  <line x1="80" y1="115" x2="130" y2="155" stroke="#E74C3C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="130,151 135,159 126,160" fill="#E74C3C"/>
+  <!-- Step 2 -->
+  <circle cx="130" cy="155" r="6" fill="#E74C3C"/>
+  <line x1="130" y1="155" x2="175" y2="188" stroke="#E74C3C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="175,184 180,192 171,193" fill="#E74C3C"/>
+  <!-- Step 3 -->
+  <circle cx="175" cy="188" r="6" fill="#E74C3C"/>
+  <line x1="175" y1="188" x2="210" y2="212" stroke="#E74C3C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="210,208 215,216 206,217" fill="#E74C3C"/>
+  <!-- Step 4 -->
+  <circle cx="210" cy="212" r="6" fill="#E74C3C"/>
+  <line x1="210" y1="212" x2="235" y2="228" stroke="#E74C3C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="235,224 240,232 231,233" fill="#E74C3C"/>
+  <!-- Step annotations -->
+  <text x="72" y="106" font-size="10" fill="#E74C3C">시작</text>
+  <!-- Learning rate annotation -->
+  <text x="88" y="155" font-size="10" fill="#555">← 학습률(α)만큼 이동</text>
+  <!-- Formula -->
+  <text x="240" y="275" text-anchor="middle" font-size="11" fill="#555">w := w - α · ∂L/∂w &nbsp;(기울기 반대 방향으로 이동)</text>
+</svg>

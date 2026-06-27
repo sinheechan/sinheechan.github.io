@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 190" font-family="sans-serif">
+  <text x="310" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">머신러닝 학습 유형</text>
+  <rect x="20" y="45" width="175" height="90" rx="8" fill="#EBF4FF" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="107" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#4A90D9">지도학습</text>
+  <text x="107" y="95" text-anchor="middle" font-size="11" fill="#555">정답(레이블) 있음</text>
+  <text x="107" y="113" text-anchor="middle" font-size="10" fill="#888">분류 · 회귀</text>
+  <text x="107" y="128" text-anchor="middle" font-size="10" fill="#aaa">SVM, 결정트리, 회귀</text>
+  <rect x="222" y="45" width="175" height="90" rx="8" fill="#EDFFF4" stroke="#34A853" stroke-width="1.5"/>
+  <text x="309" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#2E7D32">비지도학습</text>
+  <text x="309" y="95" text-anchor="middle" font-size="11" fill="#555">정답(레이블) 없음</text>
+  <text x="309" y="113" text-anchor="middle" font-size="10" fill="#888">군집화 · 차원축소</text>
+  <text x="309" y="128" text-anchor="middle" font-size="10" fill="#aaa">K-Means, PCA, DBSCAN</text>
+  <rect x="424" y="45" width="175" height="90" rx="8" fill="#FFF8EE" stroke="#F5A623" stroke-width="1.5"/>
+  <text x="511" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#E65100">강화학습</text>
+  <text x="511" y="95" text-anchor="middle" font-size="11" fill="#555">보상 기반 학습</text>
+  <text x="511" y="113" text-anchor="middle" font-size="10" fill="#888">환경 · 에이전트</text>
+  <text x="511" y="128" text-anchor="middle" font-size="10" fill="#aaa">Q-Learning, PPO</text>
+</svg>
