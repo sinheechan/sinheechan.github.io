@@ -1036,46 +1036,68 @@ pre {
 
 /* ══════════════════════════════════════════════
    포스트 오른쪽 목차(TOC) 패널
-   Chirpy JS 의 invisible 트리거가 커스텀 레이아웃에서
-   동작하지 않으므로 CSS 로 항상 표시되도록 강제합니다.
    ══════════════════════════════════════════════ */
 
-/* 1. invisible Bootstrap 클래스 무력화 → 항상 표시 */
-#toc-wrapper {
-  visibility: visible !important;
+/* 1. 오른쪽 패널을 flex 로 변경 → order 로 TOC 를 최상단으로 이동 */
+#panel-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
 }
 
-/* 2. 오른쪽 패널(col-xl-3)을 lg 이상에서도 표시 */
+/* 2. 최근 업데이트 / 인기 태그 블록은 TOC 아래로 */
+#panel-wrapper .access {
+  order: 1;
+}
+
+/* 3. TOC 를 패널 맨 위에 배치하고 sticky 고정 */
+.toc-border-cover {
+  order: -2;
+}
+
+#toc-wrapper {
+  order: -1;
+  visibility: visible !important;
+  position: sticky !important;
+  top: 4.5rem !important;      /* 상단 topnav 아래 */
+  max-height: calc(100vh - 5.5rem);
+  overflow-y: auto;
+  margin-top: 0.5rem;
+  scrollbar-width: none;
+}
+#toc-wrapper::-webkit-scrollbar { display: none; }
+
+/* 4. lg 이상에서 패널 항상 표시 */
 @media (min-width: 992px) {
   #panel-wrapper {
-    display: block !important;
+    display: flex !important;
   }
 }
 
-/* 3. TOC 링크 스타일을 포트폴리오 포인트 컬러로 */
+/* 5. TOC 링크 스타일 — 포트폴리오 포인트 컬러 */
 #toc-wrapper .panel-heading {
   color: var(--folio-accent);
   font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.03em;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  margin-bottom: 0.4rem;
 }
 
-#toc-wrapper nav#toc {
-  .toc-link {
-    color: var(--text-muted-color);
-    font-size: 0.82rem;
-    line-height: 1.5;
-    transition: color 0.15s ease;
-    border-left: 2px solid transparent;
-    padding-left: 0.6rem;
-  }
-  .toc-link:hover,
-  .is-active-link {
-    color: var(--folio-accent) !important;
-    border-left-color: var(--folio-accent);
-  }
-  .is-active-link {
-    font-weight: 600;
-  }
+#toc-wrapper nav#toc .toc-link {
+  color: var(--text-muted-color);
+  font-size: 0.81rem;
+  line-height: 1.6;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  border-left: 2px solid transparent;
+  padding-left: 0.6rem;
+}
+
+#toc-wrapper nav#toc .toc-link:hover,
+#toc-wrapper nav#toc .is-active-link {
+  color: var(--folio-accent) !important;
+  border-left-color: var(--folio-accent);
+}
+
+#toc-wrapper nav#toc .is-active-link {
+  font-weight: 600;
 }
