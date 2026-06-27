@@ -859,11 +859,11 @@ pre {
     table-layout: fixed;
   }
   .td-table th:nth-child(1),
-  .td-table td:nth-child(1) { width: auto; text-align: left; }
+  .td-table td:nth-child(1) { width: 58%; text-align: left; }
   .td-table th:nth-child(2),
-  .td-table td:nth-child(2) { width: 140px; text-align: center; }
+  .td-table td:nth-child(2) { width: 24%; text-align: center; }
   .td-table th:nth-child(3),
-  .td-table td:nth-child(3) { width: 100px; text-align: center; }
+  .td-table td:nth-child(3) { width: 18%; text-align: center; }
   .td-table thead th {
     font-size: 0.75rem;
     text-transform: none;
