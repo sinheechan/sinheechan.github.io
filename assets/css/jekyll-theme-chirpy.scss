@@ -1079,6 +1079,14 @@ pre {
   display: none !important;
 }
 
+/* Chirpy 기본 CSS가 xl(1200px) 미만에서 panel-wrapper를 display:none 처리함
+   → lg(992px) 이상에서 패널이 오른쪽에 보이도록 강제 해제 */
+@media (min-width: 992px) {
+  #panel-wrapper {
+    display: block !important;
+  }
+}
+
 /* TOC: invisible 클래스 무력화 + sticky 고정 */
 #toc-wrapper {
   visibility: visible !important;
