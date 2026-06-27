@@ -856,18 +856,25 @@ pre {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.9rem;
+    table-layout: fixed;
   }
+  .td-table th:nth-child(1),
+  .td-table td:nth-child(1) { width: auto; }
+  .td-table th:nth-child(2),
+  .td-table td:nth-child(2) { width: 120px; }
+  .td-table th:nth-child(3),
+  .td-table td:nth-child(3) { width: 90px; }
   .td-table thead th {
     font-size: 0.75rem;
     text-transform: none;
     color: var(--text-muted-color);
     font-weight: 600;
     text-align: left;
-    padding: 0.5rem 0.6rem;
+    padding: 0.5rem 0.8rem;
     border-bottom: 2px solid var(--card-border);
   }
   .td-table tbody td {
-    padding: 0.75rem 0.6rem;
+    padding: 0.75rem 0.8rem;
     border-bottom: 1px solid var(--card-border);
     color: var(--text-color);
     vertical-align: middle;
