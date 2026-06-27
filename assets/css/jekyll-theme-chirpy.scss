@@ -1035,6 +1035,40 @@ pre {
 // 수정본
 
 /* ══════════════════════════════════════════════
+   포스트 본문 제목 / 볼드 색상
+   ══════════════════════════════════════════════ */
+
+/* H1: 초록 배지 (folio-accent 배경, 흰 글자 볼드) */
+.content h1 {
+  display: inline-block;
+  background: var(--folio-accent) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  padding: 0.08em 0.55em;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+/* H2: About Me 와 같은 포인트 컬러 */
+.content h2 {
+  color: var(--folio-accent) !important;
+  font-weight: 600 !important;
+}
+
+/* H3: 흰색 볼드 */
+.content h3 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Bold(**): 노란색 볼드 */
+.content strong,
+.content b {
+  color: #f5c842 !important;
+  font-weight: 700 !important;
+}
+
+/* ══════════════════════════════════════════════
    포스트 오른쪽 목차(TOC) 패널 — xl(≥1200px) 전용
    ══════════════════════════════════════════════ */
 
