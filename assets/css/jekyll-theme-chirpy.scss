@@ -1050,6 +1050,14 @@ pre {
    포스트 본문 제목 / 볼드 색상
    ══════════════════════════════════════════════ */
 
+/* TOC 클릭 시 제목이 상단 고정 바(topnav + topbar) 아래로 보이도록
+   Chirpy 기본값 3.5rem → 6rem 으로 증가 */
+.content h2,
+.content h3,
+.content h4 {
+  scroll-margin-top: 6rem !important;
+}
+
 /* H1: 초록 배지 (folio-accent 배경, 흰 글자 볼드) */
 .content h1 {
   display: inline-block;
