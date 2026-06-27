@@ -859,17 +859,16 @@ pre {
     table-layout: fixed;
   }
   .td-table th:nth-child(1),
-  .td-table td:nth-child(1) { width: auto; }
+  .td-table td:nth-child(1) { width: auto; text-align: left; }
   .td-table th:nth-child(2),
-  .td-table td:nth-child(2) { width: 120px; }
+  .td-table td:nth-child(2) { width: 140px; text-align: center; }
   .td-table th:nth-child(3),
-  .td-table td:nth-child(3) { width: 90px; }
+  .td-table td:nth-child(3) { width: 100px; text-align: center; }
   .td-table thead th {
     font-size: 0.75rem;
     text-transform: none;
     color: var(--text-muted-color);
     font-weight: 600;
-    text-align: left;
     padding: 0.5rem 0.8rem;
     border-bottom: 2px solid var(--card-border);
   }
