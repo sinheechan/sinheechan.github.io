@@ -3,7 +3,7 @@ title: "[데이터분석] EDA — 탐색적 데이터 분석 흐름 정리"
 date: 2026-06-25 11:00:00 +0900
 categories: [Study, Python]
 tags: [Python, 데이터분석]
-toc: flase
+toc: true
 ---
 
 ## EDA란?

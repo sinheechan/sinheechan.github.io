@@ -3,7 +3,7 @@ title: "[데이터이해] 데이터 분류와 척도 정리"
 date: 2026-06-27 00:00:00 +0900
 categories: [Study, Python]
 tags: [Python, 데이터이해]
-toc: false
+toc: true
 ---
 
 ## 데이터 분류
