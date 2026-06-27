@@ -2,7 +2,7 @@
 title: "[AI 알고리즘] 머신러닝 핵심 알고리즘 개념 정리"
 date: 2026-06-25 12:00:00 +0900
 categories: [Study, Python]
-tags: [Python, AI 알고리즘]
+tags: [AI알고리즘]
 toc: true
 ---
 

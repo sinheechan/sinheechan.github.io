@@ -2,7 +2,7 @@
 title: 첫 테스트 게시물
 date: 2026-06-19 12:00:00 +0900
 categories: [테스트]
-tags: [샘플, 기록]
+tags: [기록]
 toc: true
 ---
 
