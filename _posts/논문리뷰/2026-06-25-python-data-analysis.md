@@ -6,7 +6,7 @@ tags: []
 toc: true
 ---
 
-> **원문 링크:** [Breiman (2001), Statistical Science 16(3), 199–231 — Project Euclid](https://projecteuclid.org/journals/statistical-science/volume-16/issue-3/Statistical-Modeling--The-Two-Cultures-with-comments-and-a/10.1214/ss/1009213726.full)
+- **원문 링크:** [Breiman (2001), Statistical Science 16(3), 199–231 — Project Euclid](https://projecteuclid.org/journals/statistical-science/volume-16/issue-3/Statistical-Modeling--The-Two-Cultures-with-comments-and-a/10.1214/ss/1009213726.full)
 
 | 항목 | 내용 |
 |------|------|
@@ -19,12 +19,14 @@ toc: true
 
 이 논문은 '데이터로부터 결론을 얻는다'는 행위 자체에 두 가지 전혀 다른 사고방식이 존재함을 드러냈습니다. 통계학계가 한쪽 방식에만 갇혀 있다고 도발적으로 비판하며, 이후 통계학의 무게중심을 머신러닝·데이터마이닝 쪽으로 크게 이동시켰습니다.
 
-![같은 데이터를 두고 갈라지는 두 가지 문화](/assets/img/reports/two-cultures-diagram.png){: .normal}
+![같은 데이터를 두고 갈라지는 두 가지 문화](/assets/img/reports/two-cultures-diagram.png){: .normal width="500"}
 
 *그림 1. 같은 데이터를 두고, '먼저 모델을 가정하는' 문화와 '예측 잘하는 알고리즘을 학습하는' 문화로 갈라집니다.*
 
 - 오늘날 '데이터 사이언스'라는 분야의 사고적 토대를 마련한 글로 평가받음
 - 발표 후 20년 넘게 통계학·ML 양쪽에서 가장 많이 인용되고 토론된 에세이 중 하나
+
+---
 
 ## 2. What is the literature gap — 선행연구의 공백
 
@@ -32,6 +34,8 @@ toc: true
 
 - 모델 가정이 틀리면 결론 전체가 흔들리는데도, 가정의 타당성 검증은 소홀했음
 - 크고 복잡한 데이터셋을 다룰 도구가 통계학 내부에 부족했음
+
+---
 
 ## 3. What is new in the work — 무엇이 새로운가
 
@@ -42,6 +46,8 @@ Breiman은 데이터 분석 문화를 두 가지로 명확히 개념화했습니
 
 그는 자신이 데이터 모델링 진영에서 출발했지만, 실제 문제를 풀며 알고리즘 진영이 더 정확하고 유용함을 깨달았다고 고백합니다.
 
+---
+
 ## 4. How is the gap filled — 공백을 메운 방법
 
 Breiman은 추상적 주장 대신, 자신이 직접 다룬 실제 사례들(화학 공정, 의료 진단 등)을 근거로 제시합니다. 핵심 논거는 '예측 정확도(predictive accuracy)'를 모델 평가의 객관적 잣대로 삼자는 것입니다. 모델이 데이터를 잘 설명한다고 주장하려면, 새 데이터를 실제로 잘 맞혀야 한다는 것입니다.
@@ -50,17 +56,23 @@ Breiman은 추상적 주장 대신, 자신이 직접 다룬 실제 사례들(화
 
 그는 '라쇼몽 효과(Rashomon effect)'를 지적합니다. 정확도가 거의 같은데 서로 전혀 다른 모델이 여러 개 존재할 수 있다는 것입니다. 이 경우 '어떤 변수가 진짜 원인인지' 단정하는 전통적 해석은 위험해집니다. 또한 단순한 모델이 항상 옳다는 통념(오컴의 면도날)도 정확도 앞에서는 절대적이지 않다고 봅니다.
 
+---
+
 ## 5. What is achieved with the new method — 달성한 성과
 
 - 통계학자들이 랜덤포레스트·신경망 같은 알고리즘적 도구를 진지하게 받아들이도록 설득
 - '설명 가능성'과 '예측 정확도'는 다른 목표이며, 둘을 구분해서 다뤄야 함을 분명히 함
 - 데이터과학·빅데이터 시대의 방법론적 정당성을 미리 제시
 
+---
+
 ## 6. What data are used — 사용한 데이터
 
 - 논문은 실험 데이터셋이 아닌 '에세이/관점 논문'으로, 저자가 컨설팅에서 다룬 실제 사례들을 근거로 사용
 - 화학·의료·음성인식 등 다양한 응용 사례에서 알고리즘 모델의 우수성을 예시
 - 여러 저명 통계학자(Cox, Efron 등)의 공식 토론과 저자의 반론이 함께 실림
+
+---
 
 ## 7. What are the limitations — 한계
 
