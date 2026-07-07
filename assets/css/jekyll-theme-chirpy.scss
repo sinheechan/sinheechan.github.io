@@ -486,9 +486,11 @@ pre {
   }
 
   /* ── Work / Study 카드 그리드 ── */
+  /* auto-fit: 카드 최소 폭(180px)만 확보되면 뷰포트가 좁아도 3열을 유지하고,
+     그보다 좁아질 때만 자동으로 2열 → 1열로 줄어듦 (모바일 미디어쿼리에 의존하지 않음) */
   .folio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 0.9rem;
   }
   .folio-card {
@@ -623,7 +625,6 @@ pre {
 
   /* ── 모바일 ── */
   @media (max-width: 768px) {
-    .folio-grid,
     .folio-posts {
       grid-template-columns: 1fr;
     }
