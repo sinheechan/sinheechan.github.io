@@ -83,7 +83,7 @@ projects:
 study:
   - title:
     tag: "CS50x"
-    desc: "Harvard [컴퓨터과학 개론 및 프로그래밍 온라인 교육 과정] 이수 \n 2026.02 ~ 2026.05"
+    desc: "Harvard [컴퓨터과학 개론/프로그래밍 온라인 교육 과정] 이수 \n 2026.02 ~ 2026.05"
     link: "/posts/cs50x-intro/"
     image: "/assets/img/CSx50.png"
 
