@@ -90,8 +90,8 @@ study:
   - title:
     tag: "MIT 6.006"
     desc: "MIT OpenCourseWare [알고리즘 개론] 학습 \n 2025.11 ~ 2026.05"
-    link: "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/pages/lecture-notes/"
-    image: "/assets/img/study.png"
+    link: "/posts/mit6006-intro/"
+    image: "/assets/img/MIT6006.png"
 
   - title:
     tag: "ML"
