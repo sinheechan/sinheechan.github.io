@@ -1,0 +1,27 @@
+{% assign card_link = include.p.link %}
+{% if card_link == '' or card_link == nil %}
+  {% if include.p.tag %}
+    {% assign card_link = '/tags/' %}
+  {% endif %}
+{% endif %}
+<div class="folio-card">
+  {% if include.p.image %}
+    <a href="{{ card_link | default: '#' | relative_url }}" {% if include.p.link %}target="_blank" rel="noreferrer"{% endif %} class="folio-thumb-link">
+      <div class="folio-thumb" style="background-image:url('{{ include.p.image | relative_url }}')"></div>
+    </a>
+  {% else %}
+    <div class="folio-thumb folio-thumb-empty">{{ include.p.title }}</div>
+  {% endif %}
+  <div class="folio-card-body">
+    {% if card_link %}
+      {% if include.p.link %}
+        <a class="folio-link" href="{{ card_link }}" target="_blank" rel="noreferrer">⇢ Link</a>
+      {% else %}
+        <a class="folio-link" href="{{ card_link | relative_url }}">⇢ Link</a>
+      {% endif %}
+    {% endif %}
+    {% if include.p.tag %}<p class="folio-tag">{{ include.p.tag }}</p>{% endif %}
+    {% if include.p.title and include.p.image %}<p class="folio-card-title">{{ include.p.title }}</p>{% endif %}
+    <p class="folio-desc">{{ include.p.desc }}</p>
+  </div>
+</div>

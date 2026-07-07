@@ -119,52 +119,28 @@ layout: default
   <hr class="folio-devider">
   {% endif %}
 
-  <!-- ══════════ WORK (탭) ══════════ -->
+  <!-- ══════════ WORK ══════════ -->
   {% if folio.projects %}
   <section id="folio-work" class="folio-section">
     <h2>Work</h2>
-    {% assign groups = folio.projects | map: 'group' | uniq %}
-
-    <div class="folio-tabs">
-      {% for g in groups %}
-        <button type="button" class="folio-tab{% if forloop.first %} active{% endif %}" data-tab="{{ forloop.index0 }}">{{ g }}</button>
+    <div class="folio-grid">
+      {% for p in folio.projects %}
+        {% include folio-project-card.html p=p %}
       {% endfor %}
     </div>
+  </section>
+  <hr class="folio-devider">
+  {% endif %}
 
-    {% for g in groups %}
-      {% assign items = folio.projects | where: 'group', g %}
-      <div class="folio-pane{% if forloop.first %} show{% endif %}" data-pane="{{ forloop.index0 }}">
-        {% for p in items %}
-          {% assign card_link = p.link %}
-          {% if card_link == '' or card_link == nil %}
-            {% if p.tag %}
-              {% assign card_link = '/tags/' %}
-            {% endif %}
-          {% endif %}
-          <div class="folio-card">
-            {% if p.image %}
-              <a href="{{ card_link | default: '#' | relative_url }}" {% if p.link %}target="_blank" rel="noreferrer"{% endif %} class="folio-thumb-link">
-                <div class="folio-thumb" style="background-image:url('{{ p.image | relative_url }}')"></div>
-              </a>
-            {% else %}
-              <div class="folio-thumb folio-thumb-empty">{{ p.title }}</div>
-            {% endif %}
-            <div class="folio-card-body">
-              {% if card_link %}
-                {% if p.link %}
-                  <a class="folio-link" href="{{ card_link }}" target="_blank" rel="noreferrer">⇢ Link</a>
-                {% else %}
-                  <a class="folio-link" href="{{ card_link | relative_url }}">⇢ Link</a>
-                {% endif %}
-              {% endif %}
-              {% if p.tag %}<p class="folio-tag">{{ p.tag }}</p>{% endif %}
-              {% if p.title and p.image %}<p class="folio-card-title">{{ p.title }}</p>{% endif %}
-              <p class="folio-desc">{{ p.desc }}</p>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
+  <!-- ══════════ STUDY ══════════ -->
+  {% if folio.study %}
+  <section id="folio-study" class="folio-section">
+    <h2>Study</h2>
+    <div class="folio-grid">
+      {% for p in folio.study %}
+        {% include folio-project-card.html p=p %}
+      {% endfor %}
+    </div>
   </section>
   <hr class="folio-devider">
   {% endif %}
@@ -207,20 +183,3 @@ layout: default
   </section>
 
 </div>
-
-<script>
-  (function () {
-    var tabs = document.querySelectorAll('.folio-tab');
-    var panes = document.querySelectorAll('.folio-pane');
-    tabs.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var i = this.getAttribute('data-tab');
-        tabs.forEach(function (b) { b.classList.remove('active'); });
-        this.classList.add('active');
-        panes.forEach(function (p) {
-          p.classList.toggle('show', p.getAttribute('data-pane') === i);
-        });
-      });
-    });
-  })();
-</script>

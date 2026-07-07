@@ -485,41 +485,11 @@ pre {
     line-height: 1.3;
   }
 
-  /* ── Work 탭 ── */
-  .folio-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-    margin-bottom: 1.4rem;
-  }
-  .folio-tab {
-    font-size: 0.88rem;
-    font-weight: 600;
-    padding: 0.55rem 1.05rem;
-    border-radius: 8px;
-    cursor: pointer;
-    color: var(--text-color);
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    transition: all 0.2s ease;
-  }
-  .folio-tab:hover {
-    color: var(--folio-accent);
-    border-color: var(--folio-accent);
-  }
-  .folio-tab.active {
-    color: #fff;
-    background: var(--folio-accent);
-    border-color: var(--folio-accent);
-  }
-
-  .folio-pane {
-    display: none;
-  }
-  .folio-pane.show {
+  /* ── Work / Study 카드 그리드 ── */
+  .folio-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.9rem;
   }
   .folio-card {
     background: var(--card-bg);
@@ -537,7 +507,7 @@ pre {
     border: 0 !important;
   }
   .folio-thumb {
-    height: 160px;
+    height: 110px;
     background-size: cover;
     background-position: center;
     background-color: var(--card-hover-bg);
@@ -546,46 +516,46 @@ pre {
     display: grid;
     place-items: center;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--text-muted-color);
   }
   .folio-card-body {
-    padding: 1rem;
+    padding: 0.8rem;
   }
   .folio-link {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
     color: #fff !important;
     background: var(--folio-accent);
-    padding: 0.18rem 0.6rem;
+    padding: 0.16rem 0.55rem;
     border-radius: 6px;
     text-decoration: none;
     border: 0 !important;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     transition: background 0.2s ease;
   }
   .folio-link:hover {
     background: var(--folio-accent-2);
   }
   .folio-tag {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: var(--folio-accent);
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.2rem;
   }
   .folio-card-title {
     font-weight: 700;
-    font-size: 0.95rem;
-    margin: 0 0 0.3rem;
+    font-size: 0.88rem;
+    margin: 0 0 0.25rem;
   }
   .folio-desc {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-color);
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   /* ── Recent Posts ── */
@@ -653,7 +623,7 @@ pre {
 
   /* ── 모바일 ── */
   @media (max-width: 768px) {
-    .folio-pane.show,
+    .folio-grid,
     .folio-posts {
       grid-template-columns: 1fr;
     }

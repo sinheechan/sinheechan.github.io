@@ -57,43 +57,44 @@ skills:
       image: /assets/img/scikitlearn.png
 
 
-#  Work 프로젝트
-#  group 값이 곧 탭 이름이 됩니다. (같은 group 끼리 한 탭에 묶임)
-#  여기 적은 group 순서대로 탭이 왼쪽부터 생성됩니다.
+#  Work 프로젝트 (탭 없이 한 행에 3개씩 표시)
 #  image 는 선택 — 없으면 제목이 적힌 빈 썸네일로 표시됩니다.
 
 projects:
-  - group: "Data"
-    title: "ETL 파이프라인"
+  - title: "ETL 파이프라인"
     tag: "데이터 파이프라인"
     desc: "Airflow 기반 일배치 데이터 파이프라인 구축"
     link: "https://github.com/sinheechan/"
     image: # "/assets/img/projects/etl.png"
 
-  - group: "Data"
-    title: "데이터 웨어하우스"
+  - title: "데이터 웨어하우스"
     tag: "dbt 모델링"
     desc: "분석용 데이터 마트 모델링"
     link: "https://github.com/sinheechan/"
     image:
 
-  - group: "ML"
-    title: "이탈 예측 모델"
-    tag: "분류 모델"
-    desc: "고객 이탈 예측 모델 학습 및 서빙"
-    link: "https://github.com/sinheechan/"
-    image:
-
-  - group: "ML"
-    title: "추천 시스템 실험"
+  - title: "추천 시스템 실험"
     tag: "추천 시스템"
     desc: "협업 필터링 기반 추천 실험"
     link: "https://github.com/sinheechan/"
     image:
 
-  - group: "Study"
-    title:
+#  Study 항목 (탭 없이 한 행에 3개씩 표시)
+study:
+  - title:
     tag: "Python"
+    desc: "데이터와 AI 알고리즘의 원리 및 연구사례 학습"
+    link:
+    image: "/assets/img/study.png"
+
+  - title:
+    tag: "SQL"
+    desc: "데이터와 AI 알고리즘의 원리 및 연구사례 학습"
+    link:
+    image: "/assets/img/study.png"
+
+  - title:
+    tag: "ML"
     desc: "데이터와 AI 알고리즘의 원리 및 연구사례 학습"
     link:
     image: "/assets/img/study.png"
