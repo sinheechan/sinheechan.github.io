@@ -83,8 +83,8 @@ projects:
 study:
   - title:
     tag: "CS50x"
-    desc: "하버드 대학교 제공, 컴퓨터과학 개론 및 프로그래밍 교육 과정 이수"
-    link: "https://learning.edx.org/course/course-v1:HarvardX+CS50+X/home"
+    desc: "Harvard [컴퓨터과학 개론 및 프로그래밍 온라인 교육 과정] 이수"
+    link: "/posts/cs50x-intro/"
     image: "/assets/img/CSx50.png"
 
   - title:

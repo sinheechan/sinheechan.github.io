@@ -1,4 +1,8 @@
 {% assign card_link = include.p.link %}
+{% assign is_external = false %}
+{% if card_link and card_link contains '://' %}
+  {% assign is_external = true %}
+{% endif %}
 {% if card_link == '' or card_link == nil %}
   {% if include.p.tag %}
     {% assign card_link = '/tags/' %}
@@ -6,7 +10,7 @@
 {% endif %}
 <div class="folio-card">
   {% if include.p.image %}
-    <a href="{{ card_link | default: '#' | relative_url }}" {% if include.p.link %}target="_blank" rel="noreferrer"{% endif %} class="folio-thumb-link">
+    <a href="{{ card_link | default: '#' | relative_url }}" {% if is_external %}target="_blank" rel="noreferrer"{% endif %} class="folio-thumb-link">
       <div class="folio-thumb" style="background-image:url('{{ include.p.image | relative_url }}')"></div>
     </a>
   {% else %}
@@ -14,7 +18,7 @@
   {% endif %}
   <div class="folio-card-body">
     {% if card_link %}
-      {% if include.p.link %}
+      {% if is_external %}
         <a class="folio-link" href="{{ card_link }}" target="_blank" rel="noreferrer">⇢ Link</a>
       {% else %}
         <a class="folio-link" href="{{ card_link | relative_url }}">⇢ Link</a>
