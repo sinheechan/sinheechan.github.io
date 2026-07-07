@@ -82,10 +82,10 @@ projects:
 #  Study 항목 (탭 없이 한 행에 3개씩 표시)
 study:
   - title:
-    tag: "Python"
-    desc: "데이터와 AI 알고리즘의 원리 및 연구사례 학습"
-    link:
-    image: "/assets/img/study.png"
+    tag: "CS50x"
+    desc: "하버드 대학교 제공, 컴퓨터과학 개론 및 프로그래밍 교육 과정 이수"
+    link: "https://learning.edx.org/course/course-v1:HarvardX+CS50+X/home"
+    image: "/assets/img/CSx50.png"
 
   - title:
     tag: "SQL"
