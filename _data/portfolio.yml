@@ -64,7 +64,7 @@ projects:
   - title: "ETL 파이프라인"
     tag: "데이터 파이프라인"
     desc: "Airflow 기반 일배치 데이터 파이프라인 구축"
-    link: "https://github.com/sinheechan/"
+    link: "/posts/etl-pipeline/"
     image: # "/assets/img/projects/etl.png"
 
   - title: "데이터 웨어하우스"
@@ -89,7 +89,7 @@ study:
 
   - title:
     tag: "MIT 6.006"
-    desc: "MIT OpenCourseWare [알고리즘 개론] 온라인 학습 \n 2025.11 ~ 2026.05"
+    desc: "MIT OpenCourseWare [알고리즘 개론] 온라인 교육과정 이수 \n 2025.11 ~ 2026.05"
     link: "/posts/mit6006-intro/"
     image: "/assets/img/MIT6006.png"
 
