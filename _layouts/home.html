@@ -145,27 +145,6 @@ layout: default
   <hr class="folio-devider">
   {% endif %}
 
-  <!-- ══════════ RECENT POSTS (site.posts 자동 집계) ══════════ -->
-  {% if site.posts.size > 0 %}
-  <section id="folio-posts" class="folio-section">
-    <h2>Recent Posts</h2>
-    <div class="folio-posts">
-      {% for post in site.posts limit: 4 %}
-        <a href="{{ post.url | relative_url }}" class="folio-post">
-          <p class="folio-post-title">{{ post.title }}</p>
-          <p class="folio-muted">
-            <i class="far fa-calendar fa-fw"></i> {{ post.date | date: '%Y.%m.%d' }}
-            {% if post.categories.size > 0 %}
-              <i class="far fa-folder-open fa-fw"></i> {{ post.categories | join: ', ' }}
-            {% endif %}
-          </p>
-        </a>
-      {% endfor %}
-    </div>
-  </section>
-  <hr class="folio-devider">
-  {% endif %}
-
   <!-- ══════════ CONTACT ══════════ -->
   <section id="folio-contact" class="folio-section folio-contact">
     <h2>Contact</h2>

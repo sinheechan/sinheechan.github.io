@@ -560,41 +560,6 @@ pre {
     line-height: 1.5;
   }
 
-  /* ── Recent Posts ── */
-  .folio-posts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .folio-post {
-    display: block;
-    padding: 1rem 1.1rem;
-    border-radius: 12px;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    text-decoration: none !important;
-    border-bottom: 1px solid var(--card-border) !important;
-    transition: all 0.18s ease;
-  }
-  .folio-post:hover {
-    transform: translateY(-3px);
-    border-color: var(--folio-accent) !important;
-  }
-  .folio-post-title {
-    font-weight: 700;
-    font-size: 0.97rem;
-    color: var(--text-color);
-    margin: 0 0 0.4rem;
-  }
-  .folio-more {
-    display: inline-block;
-    margin-top: 1.1rem;
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--folio-accent);
-    text-decoration: none;
-  }
-
   /* ── Contact ── */
   .folio-contact > p {
     font-size: 0.97rem;
@@ -625,9 +590,6 @@ pre {
 
   /* ── 모바일 ── */
   @media (max-width: 768px) {
-    .folio-posts {
-      grid-template-columns: 1fr;
-    }
     .folio-section > h2 {
       font-size: 1.55rem;
     }
