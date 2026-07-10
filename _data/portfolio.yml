@@ -61,9 +61,9 @@ skills:
 #  image 는 선택 — 없으면 제목이 적힌 빈 썸네일로 표시됩니다.
 
 projects:
-  - title: "ETL 파이프라인"
-    tag: "데이터 파이프라인"
-    desc: "Airflow 기반 일배치 데이터 파이프라인 구축"
+  - title: ""
+    tag: "국방 표적 분류 시스템 구축 사업"
+    desc: "시계열 탐지 데이터 기반 학습 데이터셋 구축 및 표적 분류모델 개발 \n 2024.11 ~ 2026.12(진행중)"
     link: "/posts/etl-pipeline/"
     image: # "/assets/img/projects/etl.png"
 
