@@ -501,6 +501,8 @@ pre {
     gap: 0.9rem;
   }
   .folio-card {
+    width: 100%;
+    max-width: 340px;
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 14px;
