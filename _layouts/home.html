@@ -31,7 +31,7 @@ layout: default
 
     {% if folio.about.intro %}
     <div class="folio-bundle">
-      {% for para in folio.about.intro %}<p class="folio-intro-text">{{ para }}</p>{% endfor %}
+      {% for para in folio.about.intro %}<p class="folio-intro-text">{{ para | newline_to_br }}</p>{% endfor %}
     </div>
     {% endif %}
 
