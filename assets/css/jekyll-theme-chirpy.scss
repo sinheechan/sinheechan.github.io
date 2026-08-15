@@ -53,6 +53,14 @@ body {
   blockquote {
     color: #ffffff;
   }
+
+  /* 문장이 긴 표 셀도 줄바꿈되게 (테마 기본은 white-space:nowrap이라 가로 스크롤이 생김) */
+  .table-wrapper > table thead th,
+  .table-wrapper > table tbody tr td {
+    white-space: normal;
+    line-height: 1.55;
+    vertical-align: top;
+  }
 }
 
 /* ── 사이드바: 앱 느낌으로 정돈 ── */
