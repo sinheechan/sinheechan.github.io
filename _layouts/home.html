@@ -43,7 +43,7 @@ layout: default
     {% endif %}
 
     {% if folio.experience %}
-    <div class="folio-bundle">
+    <div class="folio-bundle folio-bundle--spaced">
       <h2>Work Experience</h2>
       {% for job in folio.experience %}
         <div class="folio-row folio-row--exp">
@@ -121,7 +121,7 @@ layout: default
 
   <!-- ══════════ PROJECT ══════════ -->
   {% if folio.projects %}
-  <section id="folio-PROJECT" class="folio-section">
+  <section id="folio-work" class="folio-section">
     <h2>PROJECT</h2>
     <div class="folio-grid">
       {% for p in folio.projects %}
