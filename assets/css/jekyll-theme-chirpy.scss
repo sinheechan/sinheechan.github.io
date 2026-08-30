@@ -117,6 +117,18 @@ body {
     background-color: transparent;
   }
 
+  /* 테두리가 배경과 거의 같은 색이라 안 보이던 문제 — 눈에 띄는 회색으로 교체 */
+  .table-wrapper > table {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .table-wrapper > table thead th,
+  .table-wrapper > table tbody tr td {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .table-wrapper > table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
   /* 문장이 긴 표 셀도 줄바꿈되게 (테마 기본은 white-space:nowrap이라 가로 스크롤이 생김) */
   .table-wrapper > table thead th,
   .table-wrapper > table tbody tr td {
