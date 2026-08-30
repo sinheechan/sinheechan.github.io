@@ -64,7 +64,7 @@ projects:
     tag: "개발"
     desc: "레이더 항적 데이터 수집부터 라벨링·모델 학습까지 전체 파이프라인 설계 및 구현 \n 2024.11 ~ 2026.12(진행중)"
     link: "/posts/etl-pipeline/"
-    image: "/assets/img/work/etl-pipeline-dev-thumb.svg"
+    image: "/assets/img/work/etl-pipeline-dev-code.png"
 
   - title: ""
     tag: "데이터 품질관리"

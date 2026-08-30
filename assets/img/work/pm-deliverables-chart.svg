@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1300" width="2000" height="1300" font-family="'Pretendard', -apple-system, sans-serif">
   <defs>
     <style>
-      .box { fill:#171c1b; stroke:rgba(255,255,255,0.10); stroke-width:1; rx:12; }
+      .box { fill:#1e1e1e; stroke:rgba(255,255,255,0.10); stroke-width:1; rx:12; }
       .num { fill:#7a8a86; font-size:26px; font-weight:600; }
       .title { fill:#ffffff; font-size:34px; font-weight:800; }
       .rule { stroke:rgba(255,255,255,0.16); stroke-width:1; }
@@ -11,7 +11,7 @@
     </style>
   </defs>
 
-  <rect width="2000" height="1300" fill="#141817"/>
+  <rect width="2000" height="1300" fill="#1b1b1e"/>
 
   <!-- 섹션 1 -->
   <rect x="60" y="46" width="6" height="40" fill="#34d399"/>
