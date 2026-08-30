@@ -40,7 +40,8 @@ html {
 
 /* ── 전체 타이포그래피 ── */
 body {
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont,
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   letter-spacing: -0.01em;
 }
 
@@ -49,9 +50,62 @@ body {
   font-size: 1.02rem;
   line-height: 1.75;
   color: #ffffff;
+  max-width: 46rem; /* 한 줄 길이 제한 (45~75자) */
+
+  p,
+  li {
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    letter-spacing: -0.003em;
+    word-break: keep-all; /* 한글 단어 중간 줄바꿈 방지 */
+    overflow-wrap: break-word;
+  }
+  p {
+    margin-bottom: 1.15rem;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.35rem;
+    margin-bottom: 1.3rem;
+  }
+  li {
+    margin-bottom: 0.45rem;
+  }
+  li::marker {
+    color: var(--text-muted-color);
+  }
+
+  mark {
+    background: rgba(255, 214, 0, 0.16);
+    color: inherit;
+    padding: 0.1em 0.25em;
+    border-radius: 2px;
+  }
 
   blockquote {
     color: #ffffff;
+    border-left: 3px solid var(--main-border-color);
+    padding: 0.4rem 0 0.4rem 1.1rem;
+    margin: 1.5rem 0;
+  }
+
+  code {
+    font-size: 0.875em;
+  }
+  pre {
+    line-height: 1.65;
+  }
+  pre code {
+    font-size: 0.8125rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  table th {
+    font-weight: 700;
   }
 
   /* 문장이 긴 표 셀도 줄바꿈되게 (테마 기본은 white-space:nowrap이라 가로 스크롤이 생김) */
@@ -1066,16 +1120,23 @@ pre {
   line-height: 1.5;
 }
 
-/* H2: About Me 와 같은 포인트 컬러 */
+/* H2: About Me 와 같은 포인트 컬러 + 섹션 구분감 */
 .content h2 {
   color: var(--folio-accent) !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
+  font-size: 1.55rem;
+  letter-spacing: -0.02em;
+  margin: 3.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--main-border-color);
 }
 
 /* H3: 흰색 볼드 */
 .content h3 {
   color: #ffffff !important;
   font-weight: 700 !important;
+  font-size: 1.2rem;
+  margin: 2.2rem 0 0.7rem;
 }
 
 /* Bold(**): 노란색 볼드 */
