@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b2321"/>
+      <stop offset="100%" stop-color="#12181a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="220" fill="url(#bg)"/>
+
+  <!-- 클립보드: 산출물/체크리스트 -->
+  <g transform="translate(150,110)">
+    <rect x="-48" y="-62" width="96" height="124" rx="10" fill="none" stroke="#34d399" stroke-width="5"/>
+    <rect x="-18" y="-72" width="36" height="18" rx="5" fill="#34d399"/>
+
+    <g stroke="#a7f3d0" stroke-width="4" stroke-linecap="round">
+      <line x1="-30" y1="-28" x2="20" y2="-28" opacity="0.85"/>
+      <line x1="-30" y1="0" x2="20" y2="0" opacity="0.6"/>
+      <line x1="-30" y1="28" x2="20" y2="28" opacity="0.6"/>
+    </g>
+    <g fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-42,-32 L-38,-27 L-30,-38"/>
+      <path d="M-42,-4  L-38,1  L-30,-10"/>
+    </g>
+  </g>
+
+  <!-- 진행 현황 막대그래프 -->
+  <g transform="translate(380,150)" fill="#34d399">
+    <rect x="0"  y="-40" width="22" height="40" rx="3" opacity="0.5"/>
+    <rect x="32" y="-65" width="22" height="65" rx="3" opacity="0.7"/>
+    <rect x="64" y="-95" width="22" height="95" rx="3" opacity="0.95"/>
+  </g>
+
+  <line x1="235" y1="110" x2="330" y2="110" stroke="#4b5563" stroke-width="2" stroke-dasharray="4 5"/>
+</svg>

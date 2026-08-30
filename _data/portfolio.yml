@@ -64,19 +64,19 @@ projects:
     tag: "개발"
     desc: "레이더 항적 데이터 수집부터 라벨링·모델 학습까지 전체 파이프라인 설계 및 구현 \n 2024.11 ~ 2026.12(진행중)"
     link: "/posts/etl-pipeline/"
-    image: "/assets/img/work/etl-pipeline-thumb.svg"
+    image: "/assets/img/work/etl-pipeline-dev-thumb.svg"
 
   - title: ""
     tag: "데이터 품질관리"
     desc: "대용량 라벨 데이터 자동 품질검증 체계 구축 및 검수 프로세스 표준화 \n 2024.11 ~ 2026.12(진행중)"
     link: "/posts/etl-pipeline/"
-    image: "/assets/img/work/etl-pipeline-thumb.svg"
+    image: "/assets/img/work/etl-pipeline-quality-thumb.svg"
 
   - title: ""
     tag: "사업관리"
     desc: "요구사항 추적표·산출물 관리대장 등 사업 산출물 작성 및 관리 \n 2024.11 ~ 2026.12(진행중)"
     link: "/posts/etl-pipeline/"
-    image: "/assets/img/work/etl-pipeline-thumb.svg"
+    image: "/assets/img/work/etl-pipeline-pm-thumb.svg"
 
   # - title: "데이터 웨어하우스"
   #   tag: "dbt 모델링"
