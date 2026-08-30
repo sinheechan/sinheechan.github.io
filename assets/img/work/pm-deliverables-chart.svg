@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1300" width="2000" height="1300" font-family="'Pretendard', -apple-system, sans-serif">
+  <defs>
+    <style>
+      .box { fill:#171c1b; stroke:rgba(255,255,255,0.10); stroke-width:1; rx:12; }
+      .num { fill:#7a8a86; font-size:26px; font-weight:600; }
+      .title { fill:#ffffff; font-size:34px; font-weight:800; }
+      .rule { stroke:rgba(255,255,255,0.16); stroke-width:1; }
+      .item { fill:#c7d2cf; font-size:22px; }
+      .section { fill:#ffffff; font-size:40px; font-weight:800; }
+      .footer { fill:#8a9490; font-size:22px; }
+    </style>
+  </defs>
+
+  <rect width="2000" height="1300" fill="#141817"/>
+
+  <!-- 섹션 1 -->
+  <rect x="60" y="46" width="6" height="40" fill="#34d399"/>
+  <text x="86" y="76" class="section">사업관리문서</text>
+
+  <!-- 100 사업관리 -->
+  <g transform="translate(60,140)">
+    <rect class="box" width="356" height="380"/>
+    <text x="26" y="46" class="num">100</text>
+    <text x="26" y="86" class="title">사업관리</text>
+    <line x1="26" y1="104" x2="330" y2="104" class="rule"/>
+    <text x="26" y="150" class="item">
+      <tspan x="26" dy="0">사업수행계획서</tspan>
+      <tspan x="26" dy="34">과업대비표</tspan>
+      <tspan x="26" dy="34">요구사항 추적표</tspan>
+      <tspan x="26" dy="34">산출물 관리대장</tspan>
+      <tspan x="26" dy="34">기술적용 계획표</tspan>
+      <tspan x="26" dy="34">검사기준서</tspan>
+      <tspan x="26" dy="34">폴더구조도</tspan>
+    </text>
+  </g>
+
+  <!-- 200 의사소통관리 -->
+  <g transform="translate(440,140)">
+    <rect class="box" width="356" height="380"/>
+    <text x="26" y="46" class="num">200</text>
+    <text x="26" y="86" class="title">의사소통관리</text>
+    <line x1="26" y1="104" x2="330" y2="104" class="rule"/>
+    <text x="26" y="150" class="item">
+      <tspan x="26" dy="0">회의록</tspan>
+      <tspan x="26" dy="34">주간업무 현황 보고서</tspan>
+      <tspan x="26" dy="34">월간업무 현황 보고서</tspan>
+      <tspan x="26" dy="34">중간보고</tspan>
+      <tspan x="26" dy="34">완료보고</tspan>
+    </text>
+  </g>
+
+  <!-- 300 일정관리 -->
+  <g transform="translate(820,140)">
+    <rect class="box" width="356" height="380"/>
+    <text x="26" y="46" class="num">300</text>
+    <text x="26" y="86" class="title">일정관리</text>
+    <line x1="26" y1="104" x2="330" y2="104" class="rule"/>
+    <text x="26" y="150" class="item">
+      <tspan x="26" dy="0">WBS</tspan>
+      <tspan x="26" dy="34">월별 구축계획서</tspan>
+    </text>
+  </g>
+
+  <!-- 400 인력관리 -->
+  <g transform="translate(1200,140)">
+    <rect class="box" width="356" height="380"/>
+    <text x="26" y="46" class="num">400</text>
+    <text x="26" y="86" class="title">인력관리</text>
+    <line x1="26" y1="104" x2="330" y2="104" class="rule"/>
+    <text x="26" y="150" class="item">
+      <tspan x="26" dy="0">인력관리 계획서</tspan>
+      <tspan x="26" dy="34">인력관리 대장</tspan>
+    </text>
+  </g>
+
+  <!-- 500 위험·이슈관리 -->
+  <g transform="translate(1580,140)">
+    <rect class="box" width="356" height="380"/>
+    <text x="26" y="46" class="num">500</text>
+    <text x="26" y="86" class="title">위험·이슈관리</text>
+    <line x1="26" y1="104" x2="330" y2="104" class="rule"/>
+    <text x="26" y="150" class="item">
+      <tspan x="26" dy="0">위험·이슈 계획서</tspan>
+      <tspan x="26" dy="34">위험·이슈 대장</tspan>
+    </text>
+  </g>
+
+  <!-- 600 품질관리 (2단) -->
+  <g transform="translate(60,560)">
+    <rect class="box" width="736" height="380"/>
+    <text x="26" y="46" class="num">600</text>
+    <text x="26" y="86" class="title">품질관리</text>
+    <line x1="26" y1="104" x2="710" y2="104" class="rule"/>
+    <text x="26" y="150" class="item">
+      <tspan x="26" dy="0">품질관리 계획서</tspan>
+      <tspan x="26" dy="34">자가점검 체크리스트</tspan>
+      <tspan x="26" dy="34">단계별 자가점검 결과서</tspan>
+      <tspan x="26" dy="34">(초기·중간·최종)</tspan>
+      <tspan x="26" dy="34">품질관리 결과서</tspan>
+    </text>
+    <text x="392" y="150" class="item">
+      <tspan x="392" dy="0">3자검증 계획서·결과서</tspan>
+      <tspan x="392" dy="34">단계별 가이드라인 4종</tspan>
+      <tspan x="392" dy="34">(수집·정제·가공·검사)</tspan>
+      <tspan x="392" dy="34">산출물 품질관리</tspan>
+      <tspan x="392" dy="34">품질 수준평가 보고서</tspan>
+    </text>
+  </g>
+
+  <!-- 700 변경관리 -->
+  <g transform="translate(820,560)">
+    <rect class="box" width="356" height="380"/>
+    <text x="26" y="46" class="num">700</text>
+    <text x="26" y="86" class="title">변경관리</text>
+    <line x1="26" y1="104" x2="330" y2="104" class="rule"/>
+    <text x="26" y="150" class="item">
+      <tspan x="26" dy="0">변경관리 계획서</tspan>
+      <tspan x="26" dy="34">변경관리 대장</tspan>
+    </text>
+  </g>
+
+  <!-- 800 백업관리 -->
+  <g transform="translate(1200,560)">
+    <rect class="box" width="356" height="380"/>
+    <text x="26" y="46" class="num">800</text>
+    <text x="26" y="86" class="title">백업관리</text>
+    <line x1="26" y1="104" x2="330" y2="104" class="rule"/>
+    <text x="26" y="150" class="item">
+      <tspan x="26" dy="0">백업관리 계획서</tspan>
+      <tspan x="26" dy="34">백업관리 대장</tspan>
+    </text>
+  </g>
+
+  <!-- 900 장애 및 복구 -->
+  <g transform="translate(1580,560)">
+    <rect class="box" width="356" height="178"/>
+    <text x="26" y="42" class="num">900</text>
+    <text x="26" y="76" class="title">장애 및 복구</text>
+    <line x1="26" y1="94" x2="330" y2="94" class="rule"/>
+    <text x="26" y="130" class="item">
+      <tspan x="26" dy="0">복구 테스트 계획서</tspan>
+      <tspan x="26" dy="30">복구 테스트 결과서</tspan>
+    </text>
+  </g>
+
+  <!-- 1000 교육 및 기술이전 -->
+  <g transform="translate(1580,762)">
+    <rect class="box" width="356" height="178"/>
+    <text x="26" y="42" class="num">1000</text>
+    <text x="26" y="76" class="title">교육 및 기술이전</text>
+    <line x1="26" y1="94" x2="330" y2="94" class="rule"/>
+    <text x="26" y="130" class="item">
+      <tspan x="26" dy="0">이관대상 목록 정의서</tspan>
+      <tspan x="26" dy="30">데이터 이관계획·결과서</tspan>
+    </text>
+  </g>
+
+  <!-- 섹션 2 -->
+  <rect x="60" y="990" width="6" height="40" fill="#34d399"/>
+  <text x="86" y="1020" class="section">개발 관련 산출물</text>
+
+  <!-- 1100 하드웨어(H/W) -->
+  <g transform="translate(60,1064)">
+    <rect class="box" width="610" height="170"/>
+    <text x="26" y="42" class="num">1100</text>
+    <text x="26" y="76" class="title">하드웨어(H/W)</text>
+    <line x1="26" y1="94" x2="584" y2="94" class="rule"/>
+    <text x="26" y="130" class="item">
+      <tspan x="26" dy="0">납품확인서·정품공급서</tspan>
+      <tspan x="26" dy="30">규격 증명 서류 외</tspan>
+    </text>
+  </g>
+
+  <!-- 1200 소프트웨어(S/W) -->
+  <g transform="translate(694,1064)">
+    <rect class="box" width="610" height="170"/>
+    <text x="26" y="42" class="num">1200</text>
+    <text x="26" y="76" class="title">소프트웨어(S/W)</text>
+    <line x1="26" y1="94" x2="584" y2="94" class="rule"/>
+    <text x="26" y="130" class="item">
+      <tspan x="26" dy="0">반입목록·라이선스 확약서</tspan>
+      <tspan x="26" dy="30">CC 인증서</tspan>
+    </text>
+  </g>
+
+  <!-- 1300 개발 소프트웨어(S/W) -->
+  <g transform="translate(1328,1064)">
+    <rect class="box" width="612" height="170"/>
+    <text x="26" y="42" class="num">1300</text>
+    <text x="26" y="76" class="title">개발 소프트웨어(S/W)</text>
+    <line x1="26" y1="94" x2="586" y2="94" class="rule"/>
+    <text x="26" y="130" class="item">
+      <tspan x="26" dy="0">소스코드·화면설계서·프로그램 명세서</tspan>
+      <tspan x="26" dy="30">유스케이스 명세서·운용자 매뉴얼</tspan>
+    </text>
+  </g>
+
+  <line x1="60" y1="1266" x2="1940" y2="1266" stroke="rgba(255,255,255,0.10)"/>
+  <text x="60" y="1300" class="footer">※ 사업명 · 발주기관 · 산출물 상세내용은 보안 규정에 따라 비공개</text>
+</svg>
