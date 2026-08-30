@@ -1,35 +1,148 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1550 500" width="1550" height="500" font-family="'Pretendard', -apple-system, sans-serif">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1b2321"/>
-      <stop offset="100%" stop-color="#12181a"/>
-    </linearGradient>
+    <style>
+      .phase { font-size:22px; font-weight:800; fill:#0f1211; }
+      .stage-box { stroke:rgba(255,255,255,0.14); stroke-width:1; rx:8; }
+      .stage-title { font-size:15px; font-weight:700; fill:#101312; }
+      .out-box { fill:#1e1e1e; stroke:rgba(255,255,255,0.12); stroke-width:1; rx:6; }
+      .out-title { font-size:14px; font-weight:700; }
+      .out-item { font-size:11px; fill:#9aa5a1; }
+      .arrow { stroke:#5b6663; stroke-width:2; fill:none; marker-end:url(#arrowhead); }
+      .th { font-size:13px; font-weight:700; fill:#c7d2cf; }
+      .td { font-size:12px; fill:#9aa5a1; }
+      .rule { stroke:rgba(255,255,255,0.12); stroke-width:1; }
+      .footer { font-size:12px; fill:#6f7975; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#5b6663"/>
+    </marker>
   </defs>
 
-  <rect width="600" height="220" fill="url(#bg)"/>
+  <rect width="1550" height="500" fill="#1b1b1e"/>
 
-  <!-- 데이터 그리드 -->
-  <g transform="translate(150,110)">
-    <g fill="#34d399">
-      <rect x="-70" y="-52" width="26" height="26" rx="4" opacity="0.55"/>
-      <rect x="-36" y="-52" width="26" height="26" rx="4" opacity="0.85"/>
-      <rect x="-2"  y="-52" width="26" height="26" rx="4" opacity="0.4"/>
-      <rect x="-70" y="-18" width="26" height="26" rx="4" opacity="0.85"/>
-      <rect x="-36" y="-18" width="26" height="26" rx="4" opacity="0.4"/>
-      <rect x="-2"  y="-18" width="26" height="26" rx="4" opacity="0.6"/>
-      <rect x="-70" y="16"  width="26" height="26" rx="4" opacity="0.4"/>
-      <rect x="-36" y="16"  width="26" height="26" rx="4" opacity="0.6"/>
-      <rect x="-2"  y="16"  width="26" height="26" rx="4" opacity="0.85"/>
-    </g>
+  <!-- 좌측 세로 라벨 -->
+  <text x="18" y="140" class="footer" font-weight="700" fill="#8a9490">사업수행기관</text>
+
+  <!-- 단계 헤더 (100/200/300) -->
+  <rect x="70" y="14" width="220" height="34" rx="6" fill="#a7b3ae"/>
+  <text x="180" y="37" class="phase" text-anchor="middle">100. 준비·계획</text>
+
+  <rect x="300" y="14" width="760" height="34" rx="6" fill="#34d399"/>
+  <text x="680" y="37" class="phase" text-anchor="middle">200. 구축</text>
+
+  <rect x="1070" y="14" width="460" height="34" rx="6" fill="#7aa2d4"/>
+  <text x="1300" y="37" class="phase" text-anchor="middle">300. 운영·활용</text>
+
+  <!-- 프로세스 플로우 박스 -->
+  <!-- 110 -->
+  <rect x="70" y="66" width="200" height="46" class="stage-box" fill="#c9d1cd"/>
+  <text x="170" y="94" class="stage-title" text-anchor="middle">110. 구축계획 수립</text>
+
+  <path class="arrow" d="M270,89 H298"/>
+
+  <!-- 210 -->
+  <rect x="300" y="66" width="170" height="46" class="stage-box" fill="#7aa8ea"/>
+  <text x="385" y="94" class="stage-title" text-anchor="middle">210. 확보·수집</text>
+  <path class="arrow" d="M470,89 H498"/>
+
+  <!-- 220 -->
+  <rect x="500" y="66" width="150" height="46" class="stage-box" fill="#5fc7c1"/>
+  <text x="575" y="94" class="stage-title" text-anchor="middle">220. 정제</text>
+  <path class="arrow" d="M650,89 H678"/>
+
+  <!-- 230 -->
+  <rect x="680" y="66" width="150" height="46" class="stage-box" fill="#e8c364"/>
+  <text x="755" y="94" class="stage-title" text-anchor="middle">230. 가공</text>
+  <path class="arrow" d="M830,89 H858"/>
+
+  <!-- 240 -->
+  <rect x="860" y="66" width="180" height="46" class="stage-box" fill="#b892e0"/>
+  <text x="950" y="94" class="stage-title" text-anchor="middle">240. 데이터 학습</text>
+  <path class="arrow" d="M1040,89 H1068"/>
+
+  <!-- 310 -->
+  <rect x="1070" y="66" width="230" height="46" class="stage-box" fill="#7fd08a"/>
+  <text x="1185" y="94" class="stage-title" text-anchor="middle">310. 운영·활용(공개)</text>
+
+  <!-- 산출물 라벨 -->
+  <text x="18" y="152" class="footer" font-weight="700" fill="#8a9490">산출물</text>
+
+  <!-- 산출물 박스 -->
+  <g>
+    <rect x="70" y="130" width="200" height="86" class="out-box"/>
+    <text x="84" y="150" class="out-title" fill="#c9d1cd">사업수행계획서</text>
+    <text x="84" y="170" class="out-item">요구사항 추적표</text>
+    <text x="84" y="186" class="out-item">산출물 관리대장</text>
+  </g>
+  <g>
+    <rect x="300" y="130" width="170" height="86" class="out-box"/>
+    <text x="314" y="150" class="out-title" fill="#7aa8ea">원천데이터</text>
+    <text x="314" y="170" class="out-item">수집 가이드라인</text>
+    <text x="314" y="186" class="out-item">수집 도구 설명서</text>
+  </g>
+  <g>
+    <rect x="500" y="130" width="150" height="86" class="out-box"/>
+    <text x="514" y="150" class="out-title" fill="#5fc7c1">정제데이터</text>
+    <text x="514" y="170" class="out-item">정제 가이드라인</text>
+    <text x="514" y="186" class="out-item">정제 도구 설명서</text>
+  </g>
+  <g>
+    <rect x="680" y="130" width="150" height="86" class="out-box"/>
+    <text x="694" y="150" class="out-title" fill="#e8c364">가공데이터</text>
+    <text x="694" y="170" class="out-item">가공 기준 안내서</text>
+    <text x="694" y="186" class="out-item">데이터 표준화</text>
+  </g>
+  <g>
+    <rect x="860" y="130" width="180" height="86" class="out-box"/>
+    <text x="874" y="150" class="out-title" fill="#b892e0">학습용데이터</text>
+    <text x="874" y="170" class="out-item">전처리 소스코드</text>
+    <text x="874" y="186" class="out-item">학습 결과보고서</text>
+  </g>
+  <g>
+    <rect x="1070" y="130" width="230" height="86" class="out-box"/>
+    <text x="1084" y="150" class="out-title" fill="#7fd08a">활용데이터(공개)</text>
+    <text x="1084" y="170" class="out-item">활용 서비스 제공</text>
+    <text x="1084" y="186" class="out-item">시스템 사용자매뉴얼</text>
   </g>
 
-  <!-- 돋보기(검증) -->
-  <g transform="translate(390,95)">
-    <circle r="52" fill="#12181a"/>
-    <circle r="52" fill="none" stroke="#a7f3d0" stroke-width="7"/>
-    <line x1="37" y1="37" x2="80" y2="80" stroke="#a7f3d0" stroke-width="10" stroke-linecap="round"/>
-    <path d="M-22,2 L-6,20 L26,-16" fill="none" stroke="#34d399" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+  <!-- 품질관리 활동 -->
+  <text x="18" y="256" class="footer" font-weight="700" fill="#34d399">품질관리 활동</text>
+  <rect x="70" y="234" width="1260" height="176" rx="8" fill="#171c1b" stroke="rgba(255,255,255,0.10)"/>
 
-  <line x1="235" y1="98" x2="330" y2="98" stroke="#4b5563" stroke-width="2" stroke-dasharray="4 5"/>
+  <!-- 표 헤더 -->
+  <text x="94" y="264" class="th">단계</text>
+  <text x="270" y="264" class="th">사업 일정</text>
+  <text x="560" y="264" class="th">입력 · 출력 데이터</text>
+  <text x="960" y="264" class="th">품질검증(제3자)</text>
+  <line x1="94" y1="276" x2="1306" y2="276" class="rule"/>
+
+  <!-- 행1: 초기 사설 -->
+  <text x="94" y="302" class="td" font-weight="700" fill="#c7d2cf">초기 사설</text>
+  <text x="270" y="302" class="td">초기사설 1-Cycle 자정검사</text>
+  <text x="560" y="302" class="td">학습데이터 1% 이상 → 결과보고서 v1.0</text>
+  <text x="960" y="302" class="td">사전품질검사 기준서 v1.0</text>
+
+  <!-- 행2: 중간 사설 -->
+  <text x="94" y="330" class="td" font-weight="700" fill="#c7d2cf">중간 사설</text>
+  <text x="270" y="330" class="td">중견사설 1-Cycle 자정검사</text>
+  <text x="560" y="330" class="td">학습데이터 10% 이상 → 결과보고서 v2.0</text>
+  <text x="960" y="330" class="td">사전품질검사 기준서 v2.0</text>
+
+  <!-- 행3: 최종 사설 -->
+  <text x="94" y="358" class="td" font-weight="700" fill="#c7d2cf">최종 사설</text>
+  <text x="270" y="358" class="td">최종사설 1-Cycle 자정검사</text>
+  <text x="560" y="358" class="td">학습데이터 100% → 반출완료 계획·결과서</text>
+  <text x="960" y="358" class="td">최종품질검증 결과보고서</text>
+
+  <!-- 행4: 품질보고서 -->
+  <text x="94" y="386" class="td" font-weight="700" fill="#c7d2cf">품질보고서</text>
+  <text x="270" y="386" class="td" colspan="3">보완조치 계획서 · 결과서 작성 및 제출</text>
+
+  <!-- NIA 하단 -->
+  <rect x="70" y="424" width="90" height="34" rx="6" fill="#2f7d5c"/>
+  <text x="115" y="446" class="stage-title" text-anchor="middle" fill="#eafff3">NIA</text>
+  <text x="176" y="446" class="footer">구축 검증형 품질관리 활동의 적정성 검토 → 품질보고서 적정성 검토</text>
+
+  <line x1="70" y1="470" x2="1330" y2="470" stroke="rgba(255,255,255,0.10)"/>
+  <text x="70" y="492" class="footer">※ 품질 자정검사 활동 및 세부 항목은 사업 여건에 따라 선택적으로 진행</text>
 </svg>
