@@ -70,7 +70,7 @@ projects:
     tag: "데이터 품질관리"
     desc: "자동·표본·3자 검증 3단계로 대용량 라벨 데이터 신뢰성 확보 \n 2024.11 ~ 2026.12(진행중)"
     link: "/posts/etl-pipeline/"
-    image: "/assets/img/work/etl-pipeline-quality-thumb.svg"
+    image: "/assets/img/work/quality-mgmt-thumb.svg"
 
   - title: ""
     tag: "사업관리"

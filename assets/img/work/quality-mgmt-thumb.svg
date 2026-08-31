@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220" font-family="'Pretendard','Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b2321"/>
+      <stop offset="100%" stop-color="#12181a"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="220" fill="url(#bg)"/>
+
+  <!-- ── 상단: 3단계 프로세스 (준비·계획 → 구축 → 운영·활용) ── -->
+  <g>
+    <text x="70"  y="34" fill="#4b5563" font-size="13" font-weight="700" text-anchor="middle">100</text>
+    <text x="300" y="34" fill="#4b5563" font-size="13" font-weight="700" text-anchor="middle">200</text>
+    <text x="530" y="34" fill="#4b5563" font-size="13" font-weight="700" text-anchor="middle">300</text>
+
+    <rect x="20"  y="44" width="160" height="60" rx="12" fill="none" stroke="#34d399" stroke-width="3"/>
+    <text x="100" y="81" fill="#a7f3d0" font-size="26" font-weight="700" text-anchor="middle">계획</text>
+
+    <rect x="220" y="44" width="160" height="60" rx="12" fill="#34d399" fill-opacity="0.16" stroke="#34d399" stroke-width="3"/>
+    <text x="300" y="81" fill="#e5f9f0" font-size="26" font-weight="700" text-anchor="middle">구축</text>
+
+    <rect x="420" y="44" width="160" height="60" rx="12" fill="none" stroke="#34d399" stroke-width="3"/>
+    <text x="500" y="81" fill="#a7f3d0" font-size="26" font-weight="700" text-anchor="middle">운영</text>
+
+    <line x1="184" y1="74" x2="214" y2="74" stroke="#4b5563" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="384" y1="74" x2="414" y2="74" stroke="#4b5563" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- 연결선 -->
+  <line x1="300" y1="104" x2="300" y2="132" stroke="#4b5563" stroke-width="2" stroke-dasharray="4 5"/>
+
+  <!-- ── 하단: 품질검증 (제3자) ── -->
+  <g transform="translate(0,150)">
+    <!-- 방패 + 체크 -->
+    <path d="M70,-6 L70,-6 M70,-8 C70,-8 92,-2 92,-2 L92,20 C92,36 70,46 70,46 C70,46 48,36 48,20 L48,-2 C48,-2 70,-8 70,-8 Z"
+          fill="#12181a" stroke="#34d399" stroke-width="3.5"/>
+    <path d="M60,18 L68,27 L82,7" fill="none" stroke="#34d399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- 3층 검증 체크리스트 -->
+    <g stroke-linecap="round" stroke-linejoin="round">
+      <path d="M150,2 l7,8 l14,-18" fill="none" stroke="#34d399" stroke-width="4.5"/>
+      <line x1="182" y1="0" x2="330" y2="0" stroke="#a7f3d0" stroke-width="5" opacity="0.9"/>
+      <path d="M150,26 l7,8 l14,-18" fill="none" stroke="#34d399" stroke-width="4.5"/>
+      <line x1="182" y1="24" x2="300" y2="24" stroke="#a7f3d0" stroke-width="5" opacity="0.65"/>
+      <path d="M150,50 l7,8 l14,-18" fill="none" stroke="#34d399" stroke-width="4.5"/>
+      <line x1="182" y1="48" x2="270" y2="48" stroke="#a7f3d0" stroke-width="5" opacity="0.45"/>
+    </g>
+
+    <!-- 제3자 배지 -->
+    <rect x="470" y="8" width="96" height="42" rx="21" fill="none" stroke="#34d399" stroke-width="3"/>
+    <text x="518" y="35" fill="#a7f3d0" font-size="21" font-weight="700" text-anchor="middle">제3자</text>
+  </g>
+</svg>
